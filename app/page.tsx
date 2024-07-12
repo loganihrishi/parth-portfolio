@@ -13,7 +13,7 @@ export default function Home() {
           <FloatingNav navItems={[
             {name: 'Home', link: "/", icon: <FaHome />}
           ]}/>
-          <div className="absolute right-6 top-6"><ModeToggle /></div>
+          <div className="absolute right-4 top-3 scale-75"><ModeToggle /></div>
           <HomePage />
         </div>
       </div>
