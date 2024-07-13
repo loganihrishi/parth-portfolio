@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 import Profile_dark from '../assets/profile_dark.svg'
-import Profile_light from '../assets/profile_light.svg'
 import pic2 from '../assets/personal.svg'
 import './home.css'
 
