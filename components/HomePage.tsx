@@ -77,17 +77,42 @@ const HomePage = () => {
 
   return (
     <section className='flex flex-col'>
-      <div className='relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+      <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
         <div className='relative left-box h-[60px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
           {renderTimeline()}
-          <div className='absolute h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
         </div>
         <div className='center-box h-[60px] grow min-w-[714px] min-[1200px]:min-w-[1080px]'></div>
         <div className='relative right-box h-[60px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='absolute h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
         </div>
       </div>
-      <div></div>
+      <div className='centerbox relative flex justify-between w-full h-[602px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='relative left-box h-[602px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+        </div>
+        <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
+          <div className='basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+          <div className='basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+          <div className='basis-1/3 h-[602px]'></div>
+        </div>
+        <div className='relative right-box h-[602px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+        </div>
+      </div>
+      <div className='bottombox relative flex justify-between w-full h-[44px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='relative left-box h-[44px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+        </div>
+        <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
+          <div className='basis-1/3 h-[44px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+          <div className='basis-1/3 h-[44px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+          <div className='basis-1/3 h-[44px]'></div>
+        </div>
+        <div className='relative right-box h-[44px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+        </div>
+      </div>
     </section>
   )
   
