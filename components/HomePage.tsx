@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
-import pic from '../assets/Container.svg'
-import pic2 from '../assets/pic.jpeg'
+import Profile_dark from '../assets/profile_dark.svg'
+import Profile_light from '../assets/profile_light.svg'
+import pic2 from '../assets/personal.svg'
 import './home.css'
 
 const HomePage = () => {
@@ -69,12 +70,15 @@ const HomePage = () => {
 
       {/* Main content */}
       <div className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'>
-        <Image src={pic} alt="" height={104} width={104} className='rounded-full' />
+        <div className='rounded-full border ring-[#E8E8EC]'>
+          <Image src={Profile_dark} alt="" height={104} width={104} className='rounded-full' />
+        </div>
+
         <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>
-          <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-white'>
+          <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
             Hi, I&apos;m Parth.
           </h1>
-          <div className='font-["Libre_Franklin"] max-w-[640px] text-base sm:text-lg font-normal text-[#777B84]'>
+          <div className='font-["Libre_Franklin"] max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
             <p>
               I am a full stack developer focused on front-end development and design. Passionate about creating
               visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills
@@ -86,6 +90,8 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <Image src={pic2} alt="" className='h-full w-full object-cover' />
+      <Image src={pic2} alt="" className='h-full w-full object-cover' />
     </section>
   )
 }
