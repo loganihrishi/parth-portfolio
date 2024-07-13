@@ -78,18 +78,19 @@ const HomePage = () => {
   return (
     <section className='flex flex-col'>
       <div className='relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
-        <div className='relative h-[60px] flex-1 min-w-2 md:max-w-6 lg:max-w-[171px] border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='relative left-box h-[60px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
           {renderTimeline()}
           <div className='absolute h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
         </div>
-        <div className='hidden lg:flex h-[60px] flex-1 min-w-[810px] lg:min-w-[810px] xl:min-w-[1080px]'></div>
-        <div className='relative h-[60px] flex-1 min-w-2 md:max-w-6 lg:max-w-[171px] border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='center-box h-[60px] grow min-w-[714px] min-[1200px]:min-w-[1080px]'></div>
+        <div className='relative right-box h-[60px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
           <div className='absolute h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
         </div>
       </div>
       <div></div>
     </section>
   )
+  
 }
 
 export default HomePage
