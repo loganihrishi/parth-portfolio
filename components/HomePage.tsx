@@ -26,7 +26,8 @@ const HomePage = () => {
   };
 
   return (
-    <section className='flex flex-col'>
+    <section className='relative w-full h-full'>
+      {/* Background setup */}
       <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
         <div className='relative left-box h-[60px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
           {renderTimeline()}
@@ -44,15 +45,11 @@ const HomePage = () => {
         </div>
         <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
           <div className='basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-          <div className='relative basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='relative flex justify-center items-center top-[140px]'>
-            <Image src={pic} alt="" height={104} width={104} className='rounded-full' />
-          </div>
-          </div>
+          <div className='relative basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
           <div className='basis-1/3 h-[602px]'></div>
         </div>
         <div className='relative right-box h-[602px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-        <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
         </div>
       </div>
 
@@ -66,12 +63,31 @@ const HomePage = () => {
           <div className='basis-1/3 h-[44px]'></div>
         </div>
         <div className='relative right-box h-[44px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-        <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+        </div>
+      </div>
+
+      {/* Main content */}
+      <div className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'>
+        <Image src={pic} alt="" height={104} width={104} className='rounded-full' />
+        <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>
+          <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-white'>
+            Hi, I&apos;m Parth.
+          </h1>
+          <div className='font-["Libre_Franklin"] max-w-[640px] text-base sm:text-lg font-normal text-[#777B84]'>
+            <p>
+              I am a full stack developer focused on front-end development and design. Passionate about creating
+              visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills
+              to enhance my work.
+            </p>
+            <p>
+              Let&apos;s build something incredible together – and maybe swap a few travel stories along the way!
+            </p>
+          </div>
         </div>
       </div>
     </section>
   )
-  
 }
 
 export default HomePage
