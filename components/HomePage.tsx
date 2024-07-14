@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Profile_dark from '../assets/profile_dark.svg'
-import pic2 from '../assets/personal.svg'
+import Profile_light from '../assets/profile_light.svg'
 import './home.css'
 
 const HomePage = () => {
@@ -26,70 +26,72 @@ const HomePage = () => {
   };
 
   return (
-    <section className='relative w-full h-full'>
-      {/* Background setup */}
-      <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
-        <div className='relative left-box h-[60px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          {renderTimeline()}
-          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
-        </div>
-        <div className='center-box h-[60px] grow min-w-[714px] min-[1200px]:min-w-[1080px]'></div>
-        <div className='relative right-box h-[60px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
-        </div>
-      </div>
-
-      <div className='centerbox relative flex justify-between w-full h-[602px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
-        <div className='relative left-box h-[602px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
-        </div>
-        <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
-          <div className='basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-          <div className='relative basis-1/3 h-[602px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-          <div className='basis-1/3 h-[602px]'></div>
-        </div>
-        <div className='relative right-box h-[602px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
-        </div>
-      </div>
-
-      <div className='bottombox relative flex justify-between w-full h-[44px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
-        <div className='relative left-box h-[44px] flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
-        </div>
-        <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
-          <div className='basis-1/3 h-[44px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-          <div className='basis-1/3 h-[44px] border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-          <div className='basis-1/3 h-[44px]'></div>
-        </div>
-        <div className='relative right-box h-[44px] flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
-        </div>
-      </div>
-
-      {/* Main content */}
-      <div className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'>
-        <div className='rounded-full border ring-[#E8E8EC]'>
-          <Image src={Profile_dark} alt="" height={104} width={104} className='rounded-full' />
+    <section className="relative bg-[#161617] h-screen pt-6 w-full">
+      <div className="absolute bg-white dark:bg-[#111113] h-screen inset-x-6 rounded-xl">
+        {/* Background setup */}
+        <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+          <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            {renderTimeline()}
+            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          </div>
+          <div className='center-box h-full grow min-w-[714px] min-[1200px]:min-w-[1080px]'></div>
+          <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          </div>
         </div>
 
-        <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>
-          <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
-            Hi, I&apos;m Parth.
-          </h1>
-          <div className='font-["Libre_Franklin"] max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
-            <p>
-              I am a full stack developer focused on front-end development and design. Passionate about creating
-              visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills
-              to enhance my work.
-            </p>
-            <p>
-              Let&apos;s build something incredible together – and maybe swap a few travel stories along the way!
-            </p>
+        <div className='centerbox relative flex justify-between w-full h-[602px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+          <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          </div>
+          <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
+            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='relative basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='basis-1/3 h-full'></div>
+          </div>
+          <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          </div>
+        </div>
+
+        <div className='bottombox relative flex justify-between w-full h-[44px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+          <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          </div>
+          <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
+            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='basis-1/3 h-full'></div>
+          </div>
+          <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          </div>
+        </div>
+
+        {/* Main content */}
+        <div className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'>
+          <div className='rounded-full border ring-[#E8E8EC]'>
+            <Image src={Profile_dark} alt="" height={104} width={104} className='hidden dark:inline' />
+            <Image src={Profile_light} alt="" height={104} width={104} className='inline dark:hidden' />
+          </div>
+
+          <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>
+            <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
+              Hi, I&apos;m Parth.
+            </h1>
+            <div className='font-["Libre_Franklin"] max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
+              <p>
+                I am a full stack developer focused on front-end development and design. Passionate about creating
+                visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills
+                to enhance my work.
+              </p>
+              <p>
+                Let&apos;s build something incredible together – and maybe swap a few travel stories along the way!
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <Image src={pic2} alt="" className='h-full w-full object-cover' />
     </section>
   )
 }
