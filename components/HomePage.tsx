@@ -90,7 +90,6 @@ const HomePage = () => {
         </div>
       </div>
       <Image src={pic2} alt="" className='h-full w-full object-cover' />
-      <Image src={pic2} alt="" className='h-full w-full object-cover' />
     </section>
   )
 }
