@@ -4,6 +4,7 @@ import HomePage from "@/components/HomePage";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import Work from "@/components/Work";
+import { Testimonial } from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FloatingNav navItems={navItems} />
       <HomePage />
       <Work />
+      <Testimonial />
     </main>
   );
 }
