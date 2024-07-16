@@ -26,8 +26,8 @@ const HomePage = () => {
   };
 
   return (
-    <section className="relative bg-[#161617] h-screen pt-6 w-full">
-      <div className="absolute bg-white dark:bg-[#111113] h-screen inset-x-6 rounded-xl">
+    <section className="relative bg-[#161617] min-h-screen pt-6 w-full">
+      <div className="bg-white dark:bg-[#111113] min-h-screen mx-6 rounded-t-xl">
         {/* Background setup */}
         <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>

@@ -5,7 +5,7 @@ import { workLists } from '../data/index';
 
 const WorkList = () => {
   return (
-    <div className='flex flex-col justify-start items-start'>
+    <div className='relative flex flex-col justify-start items-start'>
       {workLists.map((workList, index) => (
         <div key={index} className='worklist-grid relative flex justify-between w-full h-[378.828px] border-solid border-[#E8E8EC] dark:border-[#222225]'>
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>

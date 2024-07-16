@@ -16,5 +16,18 @@ export const workLists = [
         title: "Publisher Prime",
         description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
         tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
-      },
+    },
+    {
+        logo: logo,
+        img: img,
+        title: "Publisher Prime",
+        description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
+        tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
+    },{
+        logo: logo,
+        img: img,
+        title: "Publisher Prime",
+        description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
+        tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
+    },
 ];
