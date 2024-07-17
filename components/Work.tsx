@@ -6,8 +6,8 @@ import WorkList from './WorkList'
 
 const Work = () => {
   return (
-    <section className="relative bg-[#161617] min-h-screen w-full flex flex-col">
-      <div className="bg-white dark:bg-[#111113] min-h-screen mx-6 mb-6 rounded-b-xl">
+    <section className="relative bg-[#161617] h-full w-full flex flex-col">
+      <div className="bg-white dark:bg-[#111113] h-full mx-6">
         {/* WORK HEADER GRID */}
         <div className='work-header-grid relative flex justify-between w-full h-[298px] border-t border-solid border-[#E8E8EC] dark:border-[#222225]'>
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
