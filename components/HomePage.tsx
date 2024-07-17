@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image';
 import Profile_dark from '../assets/profile_dark.svg'
 import Profile_light from '../assets/profile_light.svg'
-import './home.css'
 
 const HomePage = () => {
   const renderTimeline = () => {

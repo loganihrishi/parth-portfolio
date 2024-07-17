@@ -79,4 +79,15 @@
       rgba(0, 0, 0, 0)
     );
   }
+  
+  @media (max-width: 1199px) {
+    .left-box,
+    .right-box {
+      max-width: 24px;
+    }
+    .center-box {
+      min-width: 0;
+      flex-grow: 1;
+    }
+  }
 }

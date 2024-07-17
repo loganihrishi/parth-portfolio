@@ -1,6 +1,9 @@
-// workList.ts
+// workLists.ts
 import logo from '../assets/logo.svg'
 import img from "../assets/work1.svg";
+
+// testimonials.ts
+import img2 from "../assets/img2.svg";
 
 export const navItems = [
     { name: "Home", link: "#" },
@@ -19,3 +22,25 @@ export const workLists = [
     },
 
 ];
+
+export const testimonialsLeft = [
+    {
+        img: img2,
+        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+    },
+    {
+        img: img2,
+        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+    },
+]
+
+export const testimonialsRight = [
+    {
+        img: img2,
+        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+    },
+    {
+        img: img2,
+        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+    },
+]
