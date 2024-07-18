@@ -17,7 +17,7 @@ const Work = () => {
               <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] top-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
               
               {/* WORK HEADER CONTENT  */}
-              <div className='flex flex-col gap-10 w-[360px] h-full p-4'>
+              <div className='flex flex-col gap-10 max-w-[360px] h-full p-4'>
                 <Image src={Worksign_dark} alt="" height={48} width={48} className='hidden dark:inline' />
                 <Image src={Worksign_light} alt="" height={48} width={48} className='inline dark:hidden' />
                 <div className='flex flex-col justify-start items-start text-5xl font-["Bluu_Next"] tracking-[-1.92px] leading-[52.8px]'>

@@ -14,7 +14,7 @@ const WorkList = () => {
             <div className='work-div relative basis-1/3 h-full flex items-center justify-center border-r border-dashed border-[#E8E8EC] dark:border-[#222225] pb-5'>
               {/* EACH WORK CONTENT */}
               <div className='flex flex-col justify-center items-center'>
-                <div className='flex flex-col w-[360px] h-[126px] justify-start items-start p-4 pr-8 gap-3'>
+                <div className='flex flex-col max-w-[360px] h-[126px] justify-start items-start p-4 pr-8 gap-3'>
                   <div className='flex flex-row gap-2'>
                     <Image src={workList.logo} alt="" height={28} width={28} loading='lazy'/>
                     <span className='font-["Bluu_Next"] text-2xl text-[#1C2024] dark:text-[#EDEEF0]'>{workList.title}</span>  
@@ -23,7 +23,7 @@ const WorkList = () => {
                     {workList.description}
                   </span>
                 </div>
-                <div className='flex flex-row flex-wrap w-[360px] h-[52px] justify-start items-start p-4 gap-1'>
+                <div className='flex flex-row flex-wrap max-w-[360px] h-[52px] justify-start items-start p-4 gap-1'>
                   {workList.tags.map((tag, tagIndex) => (
                     <div key={tagIndex} className='text-[10px] font-["JetBrains_Mono"] px-2 py-1 text-[#1C2024] dark:text-[#EDEEF0] bg-[#E8E8EC] dark:bg-[#222225] rounded-[2px]'>
                       {tag}

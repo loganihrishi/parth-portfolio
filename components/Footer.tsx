@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full flex items-center justify-end pr-4'>
-              <p className='text-[#1C2024] dark:text-[#EDEEF0] text-xs font-light'>Terms of Use</p>
+              <p className='text-[#1C2024] dark:text-[#EDEEF0] text-xs font-light'>Built with NextJS & Tailwind</p>
             </div>
           </div>
           <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'></div>

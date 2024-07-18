@@ -6,6 +6,7 @@ import HomePage from "@/components/HomePage";
 import Work from "@/components/Work";
 import Testimonial from "@/components/Testimonial";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <FloatingNav navItems={navItems} />
       <HomePage />
       <Work />
+      <About />
       <Testimonial />
       <Footer />
     </main>
