@@ -4,6 +4,8 @@ import gradient_dark from "../assets/Gradient_dark.svg"
 import gradient_light from "../assets/Gradient_light.svg"
 import eye_dark from "../assets/eye_dark.svg"
 import eye_light from "../assets/eye_light.svg"
+import handstand from "../assets/handstand.jpeg"
+import studying from "../assets/studying.jpeg"
 
 const About = () => {
   return (
@@ -21,21 +23,33 @@ const About = () => {
               <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] top-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
             </div>
             {/* GRADIENT */}
-            <Image src={gradient_dark} alt="" height={48} width={48} className='absolute top-[98px] right-1 z-10 hidden dark:inline'/>
-            <Image src={gradient_light} alt="" height={48} width={48} className='absolute top-[98px] right-1 z-10 inline dark:hidden'/>
+            <Image src={gradient_dark} alt="" height={48} width={48} className='absolute top-[45px] right-1 z-10 hidden dark:inline'/>
+            <Image src={gradient_light} alt="" height={48} width={48} className='absolute top-[45px] right-1 z-10 inline dark:hidden'/>
 
             {/* EYE */}
-            <Image src={eye_dark} alt="" height={48} width={48} className='absolute top-[144px] left-11 z-10 hidden dark:inline'/>
-            <Image src={eye_light} alt="" height={48} width={48} className='absolute top-[144px] left-11 z-10 inline dark:hidden'/>
-            <p className='absolute top-[232px] left-11 z-10 -rotate-90 font-["JetBrains_Mono"] text-[10px] font-normal leading-[12px] text-[#81838D] dark:text-[#777B84]'>ABOUT ME</p>
+            <Image src={eye_dark} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 hidden dark:inline'/>
+            <Image src={eye_light} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 inline dark:hidden'/>
+            <p className='absolute top-[200px] left-11 z-10 -rotate-90 font-["JetBrains_Mono"] text-[10px] font-normal leading-[12px] text-[#81838D] dark:text-[#777B84]'>ABOUT ME</p>
 
             {/* PHOTOS */}
-
+            <div className='absolute top-[392px] -left-14 z-10 rounded-[3px]'>
+              <div className='flex items-center justify-center transform rotate-[-3deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
+                <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
+              </div>
+              <Image src={studying} alt="" height={300} width={200} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg]'/>
+            </div>
+            <div className='absolute top-[322px] right-7 z-10 rounded-[3px]'>
+              <div className='flex items-center justify-center transform rotate-[2deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
+                <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
+              </div>
+              <Image src={handstand} alt="" height={300} width={200} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg]'/>
+            </div>
             
+
             {/* Main Content - About Me */}
             <div 
-              className="absolute flex flex-row p-1 mt-16 border border-solid bg-white dark:bg-[#111113] border-[#E8E8EC] dark:border-[#222225] rounded-[6px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" 
-              style={{ width: 'calc(100% - 8px)', height: 'calc(100% - 140px)' }}
+              className="absolute flex flex-row p-1 mt-4 border border-solid bg-white dark:bg-[#111113] border-[#E8E8EC] dark:border-[#222225] rounded-[6px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" 
+              style={{ width: 'calc(100% - 8px)', height: 'calc(100% - 60px)' }}
             >
               <div className='w-full h-full flex flex-col items-center justify-center gap-12'>
                 <h1 className='w-[700px] text-balance text-center font-["Bluu_Next"] text-[89px] tracking-[-1.78px] leading-[80.1px] text-[#1C2024] dark:text-[#EDEEF0]'>Learning Innovating & Exploring.</h1>
