@@ -20,13 +20,20 @@ export const workLists = [
         description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
         tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
     },
+    {
+        logo: logo,
+        img: img,
+        title: "Publisher Prime",
+        description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
+        tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
+    },
 
 ];
 
 export const testimonialsLeft = [
     {
         img: img2,
-        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+        message: "lorem ipsum."
     },
     {
         img: img2,
