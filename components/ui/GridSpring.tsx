@@ -3,10 +3,6 @@ import { motion, useSpring, useMotionValue } from 'framer-motion';
 import { distance } from '@popmotion/popcorn';
 import { skillSets } from '../../data';
 
-const grid = [
-  [0, 1, 2, 3, 4, 5, 6, 7]
-];
-
 interface SquareProps {
   active: { row: number; col: number };
   setActive: React.Dispatch<React.SetStateAction<{ row: number; col: number }>>;
@@ -61,12 +57,18 @@ const App: React.FC<AppProps> = ({ type }) => {
   const skillSet = skillSets.find(set => set.type.toLowerCase() === type.toLowerCase());
   const skills = skillSet ? skillSet.skills : [];
 
+  // Calculate grid dimensions
+  const rows = Math.ceil(skills.length / 4);
+  const grid = Array.from({ length: rows }, (_, rowIndex) => (
+    Array.from({ length: Math.min(4, skills.length - rowIndex * 4) }, (_, colIndex) => rowIndex * 4 + colIndex)
+  ));
+
   return (
     <motion.div
       animate={{ '--base-hue': 360 } as any}
       initial={{ '--base-hue': 0 } as any}
       transition={{ duration: 10, loop: Infinity, ease: 'linear' }}
-      className='border border-[#D3D4D7] dark:border-[#35363A] bg-[#E8E8EC]/80 dark:bg-[#111113]/80 z-[2] rounded-[10px]'
+      className='border border-[#9d9d9f] dark:border-[#35363A] bg-[#111113]/70 dark:bg-[#111113]/80 z-[2] rounded-[10px]'
     >
       <motion.div
         style={{
@@ -74,7 +76,7 @@ const App: React.FC<AppProps> = ({ type }) => {
         }}
         className='flex flex-row flex-wrap w-auto justify-center items-center p-4 gap-2'
       >
-        {grid.flat().map((_, index) => (
+        {grid.flat().map(index => (
           <Square
             x={x}
             y={y}
@@ -82,7 +84,7 @@ const App: React.FC<AppProps> = ({ type }) => {
             setActive={setActive}
             rowIndex={Math.floor(index / 4)}
             colIndex={index % 4}
-            skill={skills[index % skills.length]}
+            skill={skills[index]}
             key={index}
           />
         ))}
