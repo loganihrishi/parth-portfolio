@@ -34,7 +34,9 @@ const Skills = () => {
                   <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Frameworks</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
-                <div className='w-full h-full'></div>
+                <div className='flex items-end justify-center w-full h-full p-6 pb-16'>
+                  <GridSpring type="frameworks" />
+                </div>
               </div>
             </div>
           </div>
@@ -47,7 +49,9 @@ const Skills = () => {
                   <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Developer Tools</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
-                <div className='w-full h-full'></div>
+                <div className='flex items-end justify-center w-full h-full p-6 pb-16'>
+                  <GridSpring type="developer tools" />
+                </div>
               </div>
             </div>
           </div>
@@ -60,7 +64,9 @@ const Skills = () => {
                   <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Libraries</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
-                <div className='w-full h-full'></div>
+                <div className='flex items-end justify-center w-full h-full p-6 pb-16'>
+                  <GridSpring type="libraries" />
+                </div>
               </div>
             </div>
           </div>

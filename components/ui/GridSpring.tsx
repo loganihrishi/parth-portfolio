@@ -1,14 +1,10 @@
 import { useState } from 'react';
 import { motion, useSpring, useMotionValue } from 'framer-motion';
 import { distance } from '@popmotion/popcorn';
-import { skillSets } from '../../data/index';
+import { skillSets } from '../../data';
 
 const grid = [
   [0, 1, 2, 3, 4, 5, 6, 7]
-];
-
-const skills = [
-  'Java', 'Python', 'C++', 'SQL', 'R', 'JavaScript', 'TypeScript', 'HTML/CSS'
 ];
 
 interface SquareProps {
@@ -53,10 +49,17 @@ const Square: React.FC<SquareProps> = ({ active, setActive, colIndex, rowIndex, 
   );
 };
 
-const App: React.FC = () => {
+interface AppProps {
+  type: string;
+}
+
+const App: React.FC<AppProps> = ({ type }) => {
   const [active, setActive] = useState({ row: 0, col: 0 });
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+
+  const skillSet = skillSets.find(set => set.type.toLowerCase() === type.toLowerCase());
+  const skills = skillSet ? skillSet.skills : [];
 
   return (
     <motion.div
