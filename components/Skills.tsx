@@ -3,7 +3,8 @@
 import React from 'react'
 import Image from 'next/image';
 import GridSpring from './ui/GridSpring';
-import handstand from "../assets/handstand.jpeg"
+import arrow_dark from "../assets/arrow_dark.svg"
+import arrow_light from "../assets/arrow_light.svg"
 import one from '../assets/1.webp'
 import two from '../assets/2.webp'
 import three from '../assets/3.webp'
@@ -12,8 +13,13 @@ import four from '../assets/4.webp'
 const Skills = () => {
   return (
     <section className="relative bg-[#161617] h-full w-full flex flex-col">
-      <div className="bg-white dark:bg-[#111113] h-full mx-6 flex items-center justify-center">
-        <div className='skills relative flex flex-row gap-8 justify-around w-[1280px] h-full py-[120px]'>
+      <div className="bg-white dark:bg-[#111113] h-full mx-6 pt-20 flex items-center justify-center">
+        <div className='absolute top-[90px] font-["Caveat"] text-5xl text-[#1C2024] dark:text-[#EDEEF0]'>Some of my skills</div>
+        <div className='absolute top-[164px] left-[300px] rotate-[-5deg] font-["Caveat"] text-base text-[#81838D] dark:text-[#777B84]'>Pssst...You can drag the skills</div>
+        <Image src={arrow_dark} alt="" height={25} width={25} className='absolute top-[190px] left-[400px] hidden dark:inline'/>
+        <Image src={arrow_light} alt="" height={25} width={25} className='absolute top-44 left-[400px] inline dark:hidden'/>
+        {/* SKILLS GRID */}
+        <div className='skills-wrapper relative flex flex-row gap-8 justify-around w-[1280px] h-full py-[120px]'>
           <div className='flex items-center justify-center h-[484px] basis-1/4'>
             <div className='relative h-[444px] w-full rounded-[3px]'>
               <div className='absolute top-0 left-0 rounded-[3px] h-full w-full border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'></div>
