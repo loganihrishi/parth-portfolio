@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
-import { motion, useAnimation, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import gradient_dark from "../assets/Gradient_dark.svg"
 import gradient_light from "../assets/Gradient_light.svg"
 import eye_dark from "../assets/eye_dark.svg"
@@ -11,32 +11,42 @@ import handstand from "../assets/handstand.jpeg"
 import studying from "../assets/studying.jpeg"
 
 const About: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  // Hardcoded original position values
+  // Original position values
   const originalX = 0;
   const originalY = 0;
 
-  const x = useMotionValue(originalX);
-  const y = useMotionValue(originalY);
-  const [isDragging, setIsDragging] = useState(false);
-
-  const springConfig = (distance: number) => ({
+  // States and motion values for the first image
+  const x1 = useMotionValue(originalX);
+  const y1 = useMotionValue(originalY);
+  const [isDragging1, setIsDragging1] = useState(false);
+  const springConfig1 = (distance: number) => ({
     stiffness: Math.max(700 - distance * 120, 0),
     damping: 20 + distance * 10
   });
-
-  const dx = useSpring(x, springConfig(Math.abs(x.get() - originalX)));
-  const dy = useSpring(y, springConfig(Math.abs(y.get() - originalY)));
-
-  const handleDragStart = () => {
-    setIsDragging(true);
+  const dx1 = useSpring(x1, springConfig1(Math.abs(x1.get() - originalX)));
+  const dy1 = useSpring(y1, springConfig1(Math.abs(y1.get() - originalY)));
+  const handleDragStart1 = () => setIsDragging1(true);
+  const handleDragEnd1 = () => {
+    setIsDragging1(false);
+    x1.set(originalX);
+    y1.set(originalY);
   };
 
-  const handleDragEnd = () => {
-    setIsDragging(false);
-    x.set(originalX);
-    y.set(originalY);
+  // States and motion values for the second image
+  const x2 = useMotionValue(originalX);
+  const y2 = useMotionValue(originalY);
+  const [isDragging2, setIsDragging2] = useState(false);
+  const springConfig2 = (distance: number) => ({
+    stiffness: Math.max(700 - distance * 120, 0),
+    damping: 20 + distance * 10
+  });
+  const dx2 = useSpring(x2, springConfig2(Math.abs(x2.get() - originalX)));
+  const dy2 = useSpring(y2, springConfig2(Math.abs(y2.get() - originalY)));
+  const handleDragStart2 = () => setIsDragging2(true);
+  const handleDragEnd2 = () => {
+    setIsDragging2(false);
+    x2.set(originalX);
+    y2.set(originalY);
   };
 
   return (
@@ -76,11 +86,11 @@ const About: React.FC = () => {
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={1}
                 dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
-                onDragStart={handleDragStart}
-                onDragEnd={handleDragEnd}
-                style={{ x: isDragging ? x : dx, y: isDragging ? y : dy }}
+                onDragStart={handleDragStart1}
+                onDragEnd={handleDragEnd1}
+                style={{ x: isDragging1 ? x1 : dx1, y: isDragging1 ? y1 : dy1 }}
                 transition={{ type: 'spring', duration: 1 }}
-                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
+                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[1.02] active:rotate-[5deg]' 
               />
             </div>
             <div className='absolute top-[322px] right-7 z-10 rounded-[3px]'>
@@ -96,9 +106,9 @@ const About: React.FC = () => {
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={1}
                 dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
-                onDragStart={handleDragStart}
-                onDragEnd={handleDragEnd}
-                style={{ x: isDragging ? x : dx, y: isDragging ? y : dy }}
+                onDragStart={handleDragStart2}
+                onDragEnd={handleDragEnd2}
+                style={{ x: isDragging2 ? x2 : dx2, y: isDragging2 ? y2 : dy2 }}
                 transition={{ type: 'spring', duration: 1 }}
                 className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
               />
@@ -106,7 +116,6 @@ const About: React.FC = () => {
 
             {/* Main Content - About Me */}
             <div 
-              ref={containerRef}
               className="absolute flex flex-row p-1 mt-4 border border-solid bg-white dark:bg-[#111113] border-[#E8E8EC] dark:border-[#222225] rounded-[6px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" 
               style={{ width: 'calc(100% - 8px)', height: 'calc(100% - 60px)' }}
             >
