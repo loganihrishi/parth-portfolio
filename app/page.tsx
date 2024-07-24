@@ -7,6 +7,7 @@ import Work from "@/components/Work";
 import Testimonial from "@/components/Testimonial";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -16,10 +17,11 @@ export default function Home() {
       <div className="fixed right-[60px] top-9 scale-1 z-[99] min-[1200px]:right-9"><ModeToggle /></div>
       <FloatingNav navItems={navItems} />
       <HomePage />
+      <Skills />
       <Work />
-      <About />
-      <Testimonial />
-      <Footer />
+      {/* <About /> */}
+      {/* <Testimonial /> */}
+      {/* <Footer /> */}
     </main>
   );
 }

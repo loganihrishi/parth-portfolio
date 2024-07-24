@@ -1,5 +1,8 @@
+"use client";
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { motion, useAnimation, useMotionValue, useSpring } from 'framer-motion';
 import gradient_dark from "../assets/Gradient_dark.svg"
 import gradient_light from "../assets/Gradient_light.svg"
 import eye_dark from "../assets/eye_dark.svg"
@@ -7,7 +10,35 @@ import eye_light from "../assets/eye_light.svg"
 import handstand from "../assets/handstand.jpeg"
 import studying from "../assets/studying.jpeg"
 
-const About = () => {
+const About: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // Hardcoded original position values
+  const originalX = 0;
+  const originalY = 0;
+
+  const x = useMotionValue(originalX);
+  const y = useMotionValue(originalY);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const springConfig = (distance: number) => ({
+    stiffness: Math.max(700 - distance * 120, 0),
+    damping: 20 + distance * 10
+  });
+
+  const dx = useSpring(x, springConfig(Math.abs(x.get() - originalX)));
+  const dy = useSpring(y, springConfig(Math.abs(y.get() - originalY)));
+
+  const handleDragStart = () => {
+    setIsDragging(true);
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+    x.set(originalX);
+    y.set(originalY);
+  };
+
   return (
     <section className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-6">
@@ -36,18 +67,34 @@ const About = () => {
               <div className='flex items-center justify-center transform rotate-[-3deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
-              <Image src={studying} alt="" height={300} width={200} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg]'/>
+              {/* <Image src={studying} alt="" height={300} width={200} draggable={true} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg]'/> */}
             </div>
             <div className='absolute top-[322px] right-7 z-10 rounded-[3px]'>
               <div className='flex items-center justify-center transform rotate-[2deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
-              <Image src={handstand} alt="" height={300} width={200} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg]'/>
+              {/* <Image src={handstand} alt="" height={300} width={200} draggable={true} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg]'/> */}
+              <motion.img
+                src={handstand.src} 
+                alt="Parth's handstand pic" 
+                height={300} 
+                width={200} 
+                drag
+                dragConstraints={containerRef}
+                dragElastic={1}
+                dragMomentum={false}
+                dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+                onDragStart={handleDragStart}
+                onDragEnd={handleDragEnd}
+                style={{ x: isDragging ? x : dx, y: isDragging ? y : dy }}
+                transition={{ type: 'spring', duration: 1 }}
+                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
+              />
             </div>
-            
 
             {/* Main Content - About Me */}
             <div 
+              ref={containerRef}
               className="absolute flex flex-row p-1 mt-4 border border-solid bg-white dark:bg-[#111113] border-[#E8E8EC] dark:border-[#222225] rounded-[6px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" 
               style={{ width: 'calc(100% - 8px)', height: 'calc(100% - 60px)' }}
             >

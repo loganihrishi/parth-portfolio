@@ -41,7 +41,7 @@ const WorkList = () => {
                     translateZ={0}
                     className="w-full h-full overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-[1.05]"
                   >
-                    <div className='w-full h-full border-[#D3D4D7] dark:border-[#35363A] rounded-[3px] border z-50'>
+                    <div className='w-full h-full border border-[#D3D4D7] dark:border-[#35363A] rounded-[3px] z-50'>
                       <div className="relative w-full h-full transform origin-center rounded-tl-[0.495708%] rounded-tr-[0.495708%]">
                         <div className="absolute inset-0 rounded-tl-[0.495708%] rounded-tr-[0.495708%] transform transition-transform duration-300 ease-in-out scale-[0.85] translate-y-[7.5%] hover:scale-[1] hover:translate-y-0">
                           <Image
