@@ -68,7 +68,7 @@ const Footer = () => {
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
           <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225] flex items-center justify-start pl-4'>
-              <p className='text-[#81838D] dark:text-[#777B84] text-xs font-light'>All rights reserved © 2024 ojieame.design</p>
+              <p className='text-[#81838D] dark:text-[#777B84] text-xs font-light'>All rights reserved © 2024 parth.design</p>
             </div>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full flex items-center justify-end pr-4'>

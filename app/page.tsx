@@ -19,9 +19,9 @@ export default function Home() {
       <HomePage />
       <Skills />
       <Work />
-      {/* <About /> */}
-      {/* <Testimonial /> */}
-      {/* <Footer /> */}
+      <About />
+      <Testimonial />
+      <Footer />
     </main>
   );
 }
