@@ -67,22 +67,34 @@ const About: React.FC = () => {
               <div className='flex items-center justify-center transform rotate-[-3deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
-              {/* <Image src={studying} alt="" height={300} width={200} draggable={true} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg]'/> */}
+              <motion.img
+                src={studying.src} 
+                alt="Parth studying" 
+                height={300} 
+                width={200} 
+                drag
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                dragElastic={1}
+                dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+                onDragStart={handleDragStart}
+                onDragEnd={handleDragEnd}
+                style={{ x: isDragging ? x : dx, y: isDragging ? y : dy }}
+                transition={{ type: 'spring', duration: 1 }}
+                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
+              />
             </div>
             <div className='absolute top-[322px] right-7 z-10 rounded-[3px]'>
               <div className='flex items-center justify-center transform rotate-[2deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
-              {/* <Image src={handstand} alt="" height={300} width={200} draggable={true} className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg]'/> */}
               <motion.img
                 src={handstand.src} 
-                alt="Parth's handstand pic" 
+                alt="Parth doing handstand on Flora Peak" 
                 height={300} 
                 width={200} 
                 drag
-                dragConstraints={containerRef}
+                dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={1}
-                dragMomentum={false}
                 dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
                 onDragStart={handleDragStart}
                 onDragEnd={handleDragEnd}

@@ -12,6 +12,25 @@ export const navItems = [
     { name: "Contact", link: "#contact" },
 ];
 
+export const skillSets = [
+    {
+        type: "Languages",
+        skills: ["Java", "Python", "C++", "SQL", "R", "JavaScript", "TypeScript", "HTML/CSS"]
+    },
+    {
+        type: "Frameworks",
+        skills: ["React", "NextJS", "ExpressJS", "NodeJS", "JUnit", "Tailwind", "RESTful API"]
+    },
+    {
+        type: "Developer Tools",
+        skills: ["Git", "Docker", "VS Code", "PyCharm", "IntelliJ", "MongoDB", "Firebase", "Figma"]
+    },
+    {
+        type: "Libraries",
+        skills: ["Framer Motion", "GSAP", "OpenCV", "Matplotlib", "Three.js"]
+    }
+]
+
 export const workLists = [
     {
         logo: logo,

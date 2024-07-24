@@ -1,13 +1,11 @@
 "use client";
 
-import React, { useRef } from 'react'
-import { motion } from 'framer-motion';
-import handstand from "../assets/handstand.jpeg"
+import React from 'react'
 import Image from 'next/image';
+import GridSpring from './ui/GridSpring';
+import handstand from "../assets/handstand.jpeg"
 
 const Skills = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
   return (
     <section className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-6 flex items-center justify-center">
@@ -21,7 +19,9 @@ const Skills = () => {
                   <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Languages</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
-                <div className='w-full h-full'></div>
+                <div className='flex items-end justify-center w-full h-full p-6 pb-16'>
+                  <GridSpring type="languages" />
+                </div>
               </div>
             </div>
           </div>
