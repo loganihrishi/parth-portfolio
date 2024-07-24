@@ -7,8 +7,7 @@ import gradient_dark from "../assets/Gradient_dark.svg"
 import gradient_light from "../assets/Gradient_light.svg"
 import eye_dark from "../assets/eye_dark.svg"
 import eye_light from "../assets/eye_light.svg"
-import handstand from "../assets/handstand.jpeg"
-import studying from "../assets/studying.jpeg"
+import { aboutData } from '../data/index'
 
 const About: React.FC = () => {
   // Original position values
@@ -78,7 +77,7 @@ const About: React.FC = () => {
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
               <motion.img
-                src={studying.src} 
+                src={aboutData.img1.src} 
                 alt="Parth studying" 
                 height={300} 
                 width={200} 
@@ -98,7 +97,7 @@ const About: React.FC = () => {
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
               <motion.img
-                src={handstand.src} 
+                src={aboutData.img2.src} 
                 alt="Parth doing handstand on Flora Peak" 
                 height={300} 
                 width={200} 
@@ -123,11 +122,8 @@ const About: React.FC = () => {
                 <h1 className='w-[700px] text-balance text-center font-["Bluu_Next"] text-[89px] tracking-[-1.78px] leading-[80.1px] text-[#1C2024] dark:text-[#EDEEF0]'>Learning Innovating & Exploring.</h1>
                 <div className='relative w-[580px] inline -space-x-1'> 
                   <span className='inline h-auto pr-[2px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-transparent'>A</span>     
-                  <span className='absolute left-1 top-[10px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>A</span>     
-                  <p className='inline text-balance text-left font-["Libre_Franklin"] text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus earum autem, sunt pariatur molestias quisquam dolorum error corporis obcaecati quaerat, magni sapiente minus, ipsum vel officia alias officiis accusamus eveniet!
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, maiores. Mollitia esse aliquam commodi debitis, vitae fugiat cum libero quibusdam, facilis blanditiis eligendi expedita deleniti, laboriosam reprehenderit laudantium laborum ratione?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quod. Perspiciatis dicta illo corporis voluptates harum sequi, consequatur eos quo ratione veritatis, rem dolores? Hic, atque distinctio. Nostrum, voluptatem. Modi?
-                  </p>
+                  <span className='absolute left-1 top-[10px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>{aboutData.firstLetter}</span>     
+                  <p className='inline text-balance text-left font-["Libre_Franklin"] text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
                 </div>
               </div>
             </div>
