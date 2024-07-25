@@ -25,7 +25,7 @@ const HomePage = () => {
   };
 
   return (
-    <section className="relative bg-[#161617] h-full pt-6 w-full">
+    <section id="home" className="relative bg-[#161617] h-full pt-6 w-full">
       <div className="bg-white dark:bg-[#111113] h-full mx-6 rounded-t-xl">
         {/* Background setup */}
         <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>

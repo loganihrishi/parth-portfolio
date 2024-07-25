@@ -6,6 +6,7 @@ import download_dark from '../assets/download_dark.svg';
 import download_light from '../assets/download_light.svg';
 import contact_dark from '../assets/contact_dark.svg';
 import contact_light from '../assets/contact_light.svg';
+import { useRouter } from 'next/navigation';
 
 const Footer = () => {
   // const handleDownload = async () => {
@@ -29,6 +30,8 @@ const Footer = () => {
   //   }
   // };
 
+  // const router = useRouter();
+  
   const handleDownload = () => {
     const url = 'https://threads-clone-local-parth.s3.eu-north-1.amazonaws.com/Parth_s_Resume.pdf';
     const a = document.createElement('a');
@@ -39,7 +42,7 @@ const Footer = () => {
   };
 
   return (
-    <section className="relative bg-[#161617] h-full w-full flex flex-col">
+    <section id="contact" className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-6 mb-6 rounded-b-xl">
         <div className='top-box relative flex justify-between w-full h-[68px]'>
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>

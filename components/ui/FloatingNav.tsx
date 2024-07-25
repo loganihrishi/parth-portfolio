@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { cn } from "@/utils/cn";
 
 export const FloatingNav = ({
   navItems,
@@ -20,12 +20,10 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
 
-  const [visible, setVisible] = useState(false);
-  // const [currentSection, setCurrentSection] = useState<number | null>(null);
-
-  // const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
+  // set true for the initial state so that nav bar is visible in the hero section
+  const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -43,30 +41,7 @@ export const FloatingNav = ({
       }
     }
   });
-
-  // useEffect(() => {
-  //   if (!scrollY) return;
-
-  //   const handleScroll = () => {
-  //     const sectionTops = sectionRefs.current.map(
-  //       (section) => section?.offsetTop || 0
-  //     );
-  //     const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-  //     const current = sectionTops.findIndex(
-  //       (top, idx) =>
-  //         scrollPosition >= top && scrollPosition < sectionTops[idx + 1]
-  //     );
-
-  //     setCurrentSection(current === -1 ? navItems.length - 1 : current);
-  //   };
-
-  //   const unsubscribe = scrollY.onChange(handleScroll);
-  //   handleScroll();
-
-  //   return () => unsubscribe();
-  // }, [scrollY, navItems.length]);
-
+  
   return (
     <AnimatePresence mode="wait">
       <motion.div

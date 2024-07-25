@@ -6,10 +6,10 @@ import WorkList from './WorkList'
 
 const Work = () => {
   return (
-    <section className="relative bg-[#161617] h-full w-full flex flex-col">
+    <section id="work" className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-6">
         {/* WORK HEADER GRID */}
-        <div className='work-header-grid relative flex justify-between w-full h-[298px] border-t border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='mt-7 work-header-grid relative flex justify-between w-full h-[298px] border-t border-solid border-[#E8E8EC] dark:border-[#222225]'>
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
           <div className='center-box border-b flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
             <div className='relative basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225] pb-5'>

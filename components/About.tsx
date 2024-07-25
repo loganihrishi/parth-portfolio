@@ -49,7 +49,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-[#161617] h-full w-full flex flex-col">
+    <section id='about' className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-6">
         <div className='backgroundbox relative flex justify-between w-full h-[920px]'>
           <div className='left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
