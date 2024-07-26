@@ -14,10 +14,10 @@ const WorkList = () => {
             <div className='work-div relative basis-1/3 h-full flex items-center justify-center border-r border-dashed border-[#E8E8EC] dark:border-[#222225] pb-5'>
               {/* EACH WORK CONTENT */}
               <div className='flex flex-col justify-center items-center'>
-                <div className='flex flex-col max-w-[360px] h-[126px] justify-start items-start p-4 pr-8 gap-3'>
-                  <div className='flex flex-row gap-2'>
-                    <Image src={workList.logo} alt="" height={28} width={28} loading='lazy'/>
-                    <span className='font-["Bluu_Next"] text-2xl text-[#1C2024] dark:text-[#EDEEF0]'>{workList.title}</span>  
+                <div className='flex flex-col max-w-[360px] h-fit justify-start items-start p-4 pr-8 gap-2'>
+                  <div className='flex flex-row gap-2 overflow-hidden'>
+                    <Image src={workList.logo} alt="" height={28} width={28} loading='lazy' className='w-7 h-7 rounded-[4px]'/>
+                    <p className='font-["Bluu_Next"] text-2xl text-[#1C2024] dark:text-[#EDEEF0]'>{workList.title}</p>  
                   </div>
                   <span className='font-["Libre_Franklin"] text-sm leading-[18px] text-[#81838D] dark:text-[#777B84]'>
                     {workList.description}

@@ -26,11 +26,11 @@ export const skillSets = [
 
 export const workLists = [
     {
-        logo: "/logo.svg",
-        img: "/work1.svg",
-        title: "Publisher Prime",
-        description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
-        tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
+        logo: "/mitrabiotechnologies_logo.jpeg", // Add the appropriate logo image path
+        img: "/AssaySimFlow.png", // Add the appropriate image path
+        title: "Mitra Biotechnologies",
+        description: "Developed dynamic web applications and engaging UIs at Mitra Biotechnologies.",
+        tags: ["LANDING PAGE DESIGN", "DESIGN SYSTEMS", "ILLUSTRATION", "ANIMATION", "UI/UX"]
     },
     {
         logo: "/logo.svg",
@@ -52,23 +52,47 @@ export const aboutData = {
 export const testimonialsLeft = [
     {
         img: '/img2.svg',
-        message: "lorem ipsum."
+        message: "Parth’s design skills are consistently outstanding."
     },
     {
         img: '/img2.svg',
-        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+        message: "His front-end expertise transforms concepts into stunning visuals."
     },
+    {
+        img: '/img2.svg',
+        message: "Parth’s innovative approach to UI/UX always impresses."
+    },
+    {
+        img: '/img2.svg',
+        message: "Parth’s continuous pursuit of new skills drives our success."
+    },
+    {
+        img: '/img2.svg',
+        message: "His ability to integrate AI into design is remarkable."
+    }
 ]
 
 export const testimonialsRight = [
     {
         img: '/img2.svg',
-        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+        message: "Parth’s front-end work is both creative and efficient."
     },
     {
         img: '/img2.svg',
-        message: "Nathan global mindset and technical prowess make him an invaluable asset."
+        message: "His eye for design and detail enhances every project."
     },
+    {
+        img: '/img2.svg',
+        message: "Parth’s technical skills bring innovative solutions to life."
+    },
+    {
+        img: '/img2.svg',
+        message: "His passion for creating beautiful products is evident."
+    },
+    {
+        img: '/img2.svg',
+        message: "Parth’s ability to stay ahead with new technologies is impressive."
+    }
 ]
 
 export const socialMedia = [
