@@ -72,9 +72,18 @@ const HomePage = () => {
             <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
           <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
-            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'>
+            </div>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full'>{time}</div>
+            <div className='absolute w-full h-full flex flex-row items-center justify-between p-4 text-[#81838D] dark:text-[#777B84] text-[10px] leading-[12px] font-["JetBrains_Mono"] font-normal'>
+              <div className='capitalize text-left '>
+                GLOBAL CITIZEN
+              </div>
+              <div className=''>
+                {time} GMT +2
+              </div>
+            </div>
           </div>
           <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
             <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
