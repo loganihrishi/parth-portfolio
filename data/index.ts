@@ -81,3 +81,16 @@ export const testimonialsRight = [
         message: "Nathan global mindset and technical prowess make him an invaluable asset."
     },
 ]
+
+export const socialMedia = [
+    {
+      id: 1,
+      img: "/git.svg",
+      link: "https://github.com/parthkumar-patel",
+    },
+    {
+      id: 2,
+      img: "/link.svg",
+      link: "https://www.linkedin.com/in/parth-patel-433703266/",
+    },
+  ];

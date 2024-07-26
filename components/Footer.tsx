@@ -6,7 +6,7 @@ import download_dark from '../assets/download_dark.svg';
 import download_light from '../assets/download_light.svg';
 import contact_dark from '../assets/contact_dark.svg';
 import contact_light from '../assets/contact_light.svg';
-import { useRouter } from 'next/navigation';
+import { socialMedia } from "@/data";
 
 const Footer = () => {
   // const handleDownload = async () => {
@@ -68,15 +68,16 @@ const Footer = () => {
                     Download Current CV
                   </span>
                 </button>
-
-                <button className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3px] bg-white dark:bg-[#101012] px-3 py-1 text-xs text-[#1C2024] dark:text-[#EDEEF0] backdrop-blur-3xl gap-[6px]">
-                    <Image src={contact_dark} alt="" height={17} width={17} className='hidden dark:inline' />
-                    <Image src={contact_light} alt="" height={17} width={17} className='inline dark:hidden' />
-                    Contact Me
-                  </span>
-                </button>
+                <a href="mailto:parthrp15@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <button className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3px] bg-white dark:bg-[#101012] px-3 py-1 text-xs text-[#1C2024] dark:text-[#EDEEF0] backdrop-blur-3xl gap-[6px]">
+                      <Image src={contact_dark} alt="" height={17} width={17} className='hidden dark:inline' />
+                      <Image src={contact_light} alt="" height={17} width={17} className='inline dark:hidden' />
+                      Contact Me
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -106,7 +107,19 @@ const Footer = () => {
             </div>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full flex items-center justify-end pr-4'>
-              <p className='text-[#1C2024] dark:text-[#EDEEF0] text-xs font-light'>Built with NextJS & Tailwind</p>
+              {/* <p className='text-[#1C2024] dark:text-[#EDEEF0] text-xs font-light'>Built with NextJS & Tailwind</p> */}
+              <div className="flex items-center md:gap-3 gap-6">
+                {socialMedia.map((info) => (
+                  <div
+                    key={info.id}
+                    className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                  >
+                    <a href={info.link} target="_blank" rel="noopener noreferrer">
+                      <img src={info.img} alt="icons" width={20} height={20}/>
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'></div>

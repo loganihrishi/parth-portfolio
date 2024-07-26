@@ -1,9 +1,25 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
+import { format } from 'date-fns';
 import Image from 'next/image';
 import Profile_dark from '../assets/profile_dark.svg'
 import Profile_light from '../assets/profile_light.svg'
 
 const HomePage = () => {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+    const updateTime = () => {
+      setTime(format(new Date(), 'hh:mm:ss a'));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const renderTimeline = () => {
     const startTop = 30;
     const step = 47;
@@ -60,7 +76,7 @@ const HomePage = () => {
           <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-            <div className='basis-1/3 h-full'></div>
+            <div className='basis-1/3 h-full'>{time}</div>
           </div>
           <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
             <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
