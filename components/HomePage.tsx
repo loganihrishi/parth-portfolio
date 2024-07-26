@@ -1,6 +1,5 @@
 'use client'
 
-import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
@@ -17,7 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
   };
 
   const [time, setTime] = useState(formatTime(new Date(serverTime), offset));
-  const [gmtValue, setGmtValue] = useState(offset >= 0 ? `+${offset}` : `${offset}`);
+  const gmtValue = offset >= 0 ? `+${offset}` : `${offset}`;
 
   useEffect(() => {
     const updateTime = () => {
@@ -129,16 +128,5 @@ const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
     </section>
   )
 }
-
-export const getServerSideProps: GetServerSideProps<HomePageProps> = async () => {
-  const serverTime = new Date().toLocaleTimeString();
-
-  return {
-    props: {
-      serverTime,
-      gmtValue: -7,
-    },
-  };
-};
 
 export default HomePage

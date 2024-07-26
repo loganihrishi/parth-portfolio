@@ -1,5 +1,4 @@
 import { navItems } from "@/data";
-
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import HomePage from "@/components/HomePage";
@@ -9,7 +8,7 @@ import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 
-const offset = -5; // Example GMT offset for EST (GMT-5)
+const offset = new Date().getTimezoneOffset() / -60; // Calculate the GMT offset
 
 async function getServerTime(offset: number) {
   const date = new Date();
