@@ -1,15 +1,19 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { format } from 'date-fns';
+import { GetServerSideProps } from 'next';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
-const HomePage = () => {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+interface HomePageProps {
+  serverTime: string;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ serverTime }) => {
+  const [time, setTime] = useState(serverTime);
 
   useEffect(() => {
     const updateTime = () => {
-      setTime(format(new Date(), 'hh:mm:ss a'));
+      setTime(new Date().toLocaleTimeString());
     };
 
     updateTime();
@@ -117,5 +121,15 @@ const HomePage = () => {
     </section>
   )
 }
+
+export const getServerSideProps: GetServerSideProps<HomePageProps> = async () => {
+  const serverTime = new Date().toLocaleTimeString();
+
+  return {
+    props: {
+      serverTime,
+    },
+  };
+};
 
 export default HomePage
