@@ -6,23 +6,29 @@ import { useState, useEffect } from 'react';
 
 interface HomePageProps {
   serverTime: string;
+  offset: number;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ serverTime }) => {
-  const formatTime = (date: Date) => date.toLocaleTimeString('en-GB');
+const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
+  const formatTime = (date: Date, offset: number) => {
+    const utcTime = date.getTime() + (date.getTimezoneOffset() * 60000);
+    const localTime = new Date(utcTime + (3600000 * offset));
+    return localTime.toLocaleTimeString('en-GB'); // 'en-GB' locale for 24-hour format
+  };
 
-  const [time, setTime] = useState(formatTime(new Date(serverTime)));
+  const [time, setTime] = useState(formatTime(new Date(serverTime), offset));
+  const [gmtValue, setGmtValue] = useState(offset >= 0 ? `+${offset}` : `${offset}`);
 
   useEffect(() => {
     const updateTime = () => {
-      setTime(formatTime(new Date()));
+      setTime(formatTime(new Date(), offset));
     };
 
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [offset]);
 
   const renderTimeline = () => {
     const startTop = 30;
@@ -87,7 +93,7 @@ const HomePage: React.FC<HomePageProps> = ({ serverTime }) => {
                 GLOBAL CITIZEN
               </p>
               <p className='capitalize text-right z-[2]'>
-                {time} GMT-7
+                {time} GMT{gmtValue}
               </p>
             </div>
           </div>
@@ -130,6 +136,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
   return {
     props: {
       serverTime,
+      gmtValue: -7,
     },
   };
 };
