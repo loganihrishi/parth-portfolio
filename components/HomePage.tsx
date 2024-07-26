@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import { format } from 'date-fns';
 import Image from 'next/image';
-import Profile_dark from '../assets/profile_dark.svg'
-import Profile_light from '../assets/profile_light.svg'
 
 const HomePage = () => {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
@@ -86,8 +84,8 @@ const HomePage = () => {
         {/* Main content */}
         <div className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'>
           <div className='rounded-full border ring-[#E8E8EC]'>
-            <Image src={Profile_dark} alt="" height={104} width={104} className='hidden dark:inline' />
-            <Image src={Profile_light} alt="" height={104} width={104} className='inline dark:hidden' />
+            <Image src={'/profile_dark.svg'} alt="" height={104} width={104} className='hidden dark:inline' />
+            <Image src={'/profile_light.svg'} alt="" height={104} width={104} className='inline dark:hidden' />
           </div>
 
           <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>

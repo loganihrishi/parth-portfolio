@@ -2,10 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import download_dark from '../assets/download_dark.svg';
-import download_light from '../assets/download_light.svg';
-import contact_dark from '../assets/contact_dark.svg';
-import contact_light from '../assets/contact_light.svg';
 import { socialMedia } from "@/data";
 
 const Footer = () => {
@@ -63,8 +59,8 @@ const Footer = () => {
                 <button onClick={handleDownload} className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3px] bg-white dark:bg-[#101012] px-3 py-1 text-xs text-[#1C2024] dark:text-[#EDEEF0] backdrop-blur-3xl gap-[6px]">
-                    <Image src={download_dark} alt="" height={17} width={17} className='hidden dark:inline' />
-                    <Image src={download_light} alt="" height={17} width={17} className='inline dark:hidden' />
+                    <Image src={'/download_dark.svg'} alt="" height={17} width={17} className='hidden dark:inline' />
+                    <Image src={'/download_light.svg'} alt="" height={17} width={17} className='inline dark:hidden' />
                     Download Current CV
                   </span>
                 </button>
@@ -72,8 +68,8 @@ const Footer = () => {
                   <button className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3px] bg-white dark:bg-[#101012] px-3 py-1 text-xs text-[#1C2024] dark:text-[#EDEEF0] backdrop-blur-3xl gap-[6px]">
-                      <Image src={contact_dark} alt="" height={17} width={17} className='hidden dark:inline' />
-                      <Image src={contact_light} alt="" height={17} width={17} className='inline dark:hidden' />
+                      <Image src={'/contact_dark.svg'} alt="" height={17} width={17} className='hidden dark:inline' />
+                      <Image src={'/contact_light.svg'} alt="" height={17} width={17} className='inline dark:hidden' />
                       Contact Me
                     </span>
                   </button>

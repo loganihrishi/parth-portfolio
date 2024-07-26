@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Worksign_dark from '../assets/worksign_dark.svg'
-import Worksign_light from '../assets/worksign_light.svg'
 import WorkList from './WorkList'
 
 const Work = () => {
@@ -18,8 +16,8 @@ const Work = () => {
               
               {/* WORK HEADER CONTENT  */}
               <div className='flex flex-col gap-10 max-w-[360px] h-full p-4'>
-                <Image src={Worksign_dark} alt="" height={48} width={48} className='hidden dark:inline' />
-                <Image src={Worksign_light} alt="" height={48} width={48} className='inline dark:hidden' />
+                <Image src={'/worksign_dark.svg'} alt="" height={48} width={48} className='hidden dark:inline' />
+                <Image src={'/worksign_light.svg'} alt="" height={48} width={48} className='inline dark:hidden' />
                 <div className='flex flex-col justify-start items-start text-5xl font-["Bluu_Next"] tracking-[-1.92px] leading-[52.8px]'>
                   <span className='text-[#1C2024] dark:text-[#EDEEF0]'>Work.</span>
                   <span className='text-[#C0C1C5] dark:text-[#45464B]'>A selection of recent projects.</span>

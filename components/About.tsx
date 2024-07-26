@@ -1,12 +1,8 @@
 "use client";
 
 import Image from 'next/image'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import gradient_dark from "../assets/Gradient_dark.svg"
-import gradient_light from "../assets/Gradient_light.svg"
-import eye_dark from "../assets/eye_dark.svg"
-import eye_light from "../assets/eye_light.svg"
 import { aboutData } from '../data/index'
 
 const About: React.FC = () => {
@@ -63,12 +59,12 @@ const About: React.FC = () => {
               <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] top-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
             </div>
             {/* GRADIENT */}
-            <Image src={gradient_dark} alt="" height={48} width={48} className='absolute top-[45px] right-1 z-10 hidden dark:inline'/>
-            <Image src={gradient_light} alt="" height={48} width={48} className='absolute top-[45px] right-1 z-10 inline dark:hidden'/>
+            <Image src={"/Gradient_dark.svg"} alt="" height={48} width={48} className='absolute top-[45px] right-1 z-10 hidden dark:inline'/>
+            <Image src={ "/Gradient_light.svg"} alt="" height={48} width={48} className='absolute top-[45px] right-1 z-10 inline dark:hidden'/>
 
             {/* EYE */}
-            <Image src={eye_dark} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 hidden dark:inline'/>
-            <Image src={eye_light} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 inline dark:hidden'/>
+            <Image src={"/eye_dark.svg"} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 hidden dark:inline'/>
+            <Image src={"/eye_light.svg"} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 inline dark:hidden'/>
             <p className='absolute top-[200px] left-11 z-10 -rotate-90 font-["JetBrains_Mono"] text-[10px] font-normal leading-[12px] text-[#81838D] dark:text-[#777B84]'>ABOUT ME</p>
 
             {/* PHOTOS */}
@@ -77,7 +73,7 @@ const About: React.FC = () => {
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
               <motion.img
-                src={aboutData.img1.src} 
+                src={aboutData.img1} 
                 alt="Parth studying" 
                 height={300} 
                 width={200} 
@@ -97,7 +93,7 @@ const About: React.FC = () => {
                 <p className='text-base font-["Caveat"] font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
               <motion.img
-                src={aboutData.img2.src} 
+                src={aboutData.img2} 
                 alt="Parth doing handstand on Flora Peak" 
                 height={300} 
                 width={200} 

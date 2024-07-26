@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import img2 from "../assets/img2.svg";
+import img2 from "/img2.svg";
 import Marquee from "react-fast-marquee";
 import { testimonialsLeft, testimonialsRight } from '../data/index';
 
