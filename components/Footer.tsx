@@ -29,7 +29,7 @@ const Footer = () => {
   // const router = useRouter();
   
   const handleDownload = () => {
-    const url = 'https://threads-clone-local-parth.s3.eu-north-1.amazonaws.com/Parth_s_Resume.pdf';
+    const url = 'https://threads-clone-local-parth.s3.eu-north-1.amazonaws.com/Parths_Resume.pdf';
     const a = document.createElement('a');
     a.href = url;
     a.target = '_blank';
