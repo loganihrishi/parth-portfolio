@@ -120,6 +120,7 @@ const About: React.FC = () => {
                   <span className='inline h-auto pr-[2px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-transparent'>A</span>     
                   <span className='absolute left-1 top-[10px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>{aboutData.firstLetter}</span>     
                   <p className='inline text-balance text-left font-["Libre_Franklin"] text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
+                  <p className='block text-balance text-left pt-2 font-["Libre_Franklin"] text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about2}</p>
                 </div>
               </div>
             </div>
