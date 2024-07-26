@@ -26,18 +26,18 @@ export const skillSets = [
 
 export const workLists = [
     {
-        logo: "/mitrabiotechnologies_logo.jpeg", // Add the appropriate logo image path
-        img: "/AssaySimFlow.png", // Add the appropriate image path
+        logo: "/mitrabiotechnologies_logo.jpeg", 
+        img: "/AssaySimFlow.png", 
         title: "Mitra Biotechnologies",
-        description: "Developed dynamic web applications and engaging UIs at Mitra Biotechnologies.",
+        description: "Development of web-based application simulations for paper-based diagnostic assays.",
         tags: ["LANDING PAGE DESIGN", "DESIGN SYSTEMS", "ILLUSTRATION", "ANIMATION", "UI/UX"]
     },
     {
-        logo: "/logo.svg",
-        img: "/work1.svg",
-        title: "Publisher Prime",
-        description: "This innovative project leverages cutting-edge technology to simulate flight conditions and principles in a virtual environment.",
-        tags: ["ART DIRECTION", "AR", "INTERACTION", "3D MODELING"]
+        logo: "/subletify_logo.png",
+        img: "/subletify.png",
+        title: "Subletify",
+        description: "Simplifying sublet searches for UBC students, fostering a supportive and inclusive community.",
+        tags: ["CO-FOUNDER", "DEVELOPER", "PRODUCT MANAGER", "USER-FRIENDLY", "SUPPORT"]
     },
 
 ];
