@@ -19,13 +19,13 @@ const WorkList = () => {
                     <Image src={workList.logo} alt="" height={28} width={28} loading='lazy' className='w-7 h-7 rounded-[4px]'/>
                     <p className='font-["Bluu_Next"] text-2xl text-[#1C2024] dark:text-[#EDEEF0]'>{workList.title}</p>  
                   </div>
-                  <span className='font-["Libre_Franklin"] text-sm leading-[18px] text-[#81838D] dark:text-[#777B84]'>
+                  <span className='font-libre text-sm leading-[18px] text-[#81838D] dark:text-[#777B84]'>
                     {workList.description}
                   </span>
                 </div>
                 <div className='flex flex-row flex-wrap max-w-[360px] h-[52px] justify-start items-start p-4 gap-1'>
                   {workList.tags.map((tag, tagIndex) => (
-                    <div key={tagIndex} className='text-[10px] font-["JetBrains_Mono"] px-2 py-1 text-[#1C2024] dark:text-[#EDEEF0] bg-[#E8E8EC] dark:bg-[#222225] rounded-[2px]'>
+                    <div key={tagIndex} className='text-[10px] font-jetbrains px-2 py-1 text-[#1C2024] dark:text-[#EDEEF0] bg-[#E8E8EC] dark:bg-[#222225] rounded-[2px]'>
                       {tag}
                     </div>
                   ))}

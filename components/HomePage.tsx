@@ -87,7 +87,7 @@ const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
             </div>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full'></div>
-            <div className='absolute top-0 left-0 w-full h-full flex flex-row items-center justify-between p-4 text-[#81838D] dark:text-[#777B84] text-[10px] leading-[12px] font-["JetBrains_Mono"] font-normal'>
+            <div className='absolute top-0 left-0 w-full h-full flex flex-row items-center justify-between p-4 text-[#81838D] dark:text-[#777B84] text-[10px] leading-[12px] font-jetbrains font-normal'>
               <p className='capitalize text-left z-[2]'>
                 GLOBAL CITIZEN
               </p>
@@ -112,7 +112,7 @@ const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
             <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
               Hi, I&apos;m Parth.
             </h1>
-            <div className='font-["Libre_Franklin"] max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
+            <div className='font-libre max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
               <p>
                 I am a full stack developer focused on front-end development and design. Passionate about creating
                 visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills

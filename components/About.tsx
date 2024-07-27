@@ -65,7 +65,7 @@ const About: React.FC = () => {
             {/* EYE */}
             <Image src={"/eye_dark.svg"} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 hidden dark:inline'/>
             <Image src={"/eye_light.svg"} alt="" height={48} width={48} className='absolute top-[112px] left-11 z-10 inline dark:hidden'/>
-            <p className='absolute top-[200px] left-11 z-10 -rotate-90 font-["JetBrains_Mono"] text-[10px] font-normal leading-[12px] text-[#81838D] dark:text-[#777B84]'>ABOUT ME</p>
+            <p className='absolute top-[200px] left-11 z-10 -rotate-90 font-jetbrains text-[10px] font-normal leading-[12px] text-[#81838D] dark:text-[#777B84]'>ABOUT ME</p>
 
             {/* PHOTOS */}
             <div className='absolute top-[392px] -left-14 z-10 rounded-[3px]'>
@@ -119,8 +119,8 @@ const About: React.FC = () => {
                 <div className='relative w-[580px] inline -space-x-1'> 
                   <span className='inline h-auto pr-[2px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-transparent'>A</span>     
                   <span className='absolute left-1 top-[10px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>{aboutData.firstLetter}</span>     
-                  <p className='inline text-balance text-left font-["Libre_Franklin"] text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
-                  <p className='block text-balance text-left pt-2 font-["Libre_Franklin"] text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about2}</p>
+                  <p className='inline text-balance text-left font-libre text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
+                  <p className='block text-balance text-left pt-2 font-libre text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about2}</p>
                 </div>
               </div>
             </div>

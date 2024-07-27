@@ -33,7 +33,7 @@ const Square: React.FC<SquareProps> = ({ active, setActive, colIndex, rowIndex, 
       dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
       dragElastic={1}
       onDragStart={() => setActive({ row: rowIndex, col: colIndex })}
-      className='text-base font-["JetBrains_Mono"] capitalize px-3 py-2 text-[#1C2024] dark:text-[#EDEEF0] bg-[#E8E8EC] dark:bg-[#222225] rounded-[4px]'
+      className='text-base font-jetbrains capitalize px-3 py-2 text-[#1C2024] dark:text-[#EDEEF0] bg-[#E8E8EC] dark:bg-[#222225] rounded-[4px]'
       style={{
         x: isDragging ? x : dx,
         y: isDragging ? y : dy,

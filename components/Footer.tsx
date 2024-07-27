@@ -45,10 +45,10 @@ const Footer = () => {
           <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225] flex items-center justify-start pl-4'>
               <div className='flex-col'>
-                <p className='font-["Libre_Franklin"] text-sm font-medium leading-[18px] text-[#1C2024] dark:text-[#EDEEF0]'>
+                <p className='font-libre text-sm font-medium leading-[18px] text-[#1C2024] dark:text-[#EDEEF0]'>
                   Get in touch
                 </p>
-                <p className='font-["Libre_Franklin"] text-sm font-normal leading-[18px] text-[#81838D] dark:text-[#777B84]'>
+                <p className='font-libre text-sm font-normal leading-[18px] text-[#81838D] dark:text-[#777B84]'>
                   Send an email or DM and I&apos;ll get back to you asap.
                 </p>
               </div>

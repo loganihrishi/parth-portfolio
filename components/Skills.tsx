@@ -20,7 +20,7 @@ const Skills = () => {
               <div className='flex flex-col h-full w-full border border-[#D3D4D7] dark:border-[#35363A] bg-[#E8E8EC] dark:bg-[#111113] object-cover rounded-[3px] transform rotate-[3deg] z-[1]'>
                 <Image src={'/2.webp'} width={296} height={444} alt="" loading='lazy' draggable={true} className='absolute top-0 left-0 h-full w-full object-cover opacity-80 dark:opacity-60 hover:opacity-100 rounded-[2px]'/>
                 <div className='absolute top-4 left-1/2 -translate-x-1/2 w-[80%] px-5 py-3 text-left flex flex-row items-center justify-start gap-2 bg-white/40 dark:bg-white/20 backdrop-blur-[20px] rounded-[5px] outline-none'>
-                  <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Languages</div>
+                  <div className='font-libre text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Languages</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
                 <div className='flex items-end justify-center w-full h-full p-6 py-16 hover:cursor-grab active:cursor-grabbing'>
@@ -35,7 +35,7 @@ const Skills = () => {
               <div className='flex flex-col h-full w-full border border-[#D3D4D7] dark:border-[#35363A] bg-[#E8E8EC] dark:bg-[#111113] object-cover rounded-[3px] transform rotate-[-4deg] z-[1]'>
                 <Image src={'/1.webp'} alt="" width={296} height={444} loading='lazy' draggable={true} className='absolute top-0 left-0 h-full w-full object-cover opacity-80 dark:opacity-60 hover:opacity-100 rounded-[2px]'/>
                 <div className='absolute top-4 left-1/2 -translate-x-1/2 w-[80%] px-5 py-3 text-left flex flex-row items-center justify-start gap-2 bg-white/40 dark:bg-white/20 backdrop-blur-[20px] rounded-[5px] outline-none'>
-                  <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Frameworks</div>
+                  <div className='font-libre text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Frameworks</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
                 <div className='flex items-end justify-center w-full h-full p-6 py-[88px] hover:cursor-grab active:cursor-grabbing'>
@@ -50,7 +50,7 @@ const Skills = () => {
               <div className='flex flex-col h-full w-full border border-[#D3D4D7] dark:border-[#35363A] bg-[#E8E8EC] dark:bg-[#111113] object-cover rounded-[3px] transform rotate-[2deg] z-[1]'>
                 <Image src={'/3.webp'} alt="" width={296} height={444} loading='lazy' draggable={true} className='absolute top-0 left-0 h-full w-full object-cover opacity-80 dark:opacity-60 hover:opacity-100 rounded-[2px]'/>
                 <div className='absolute top-4 left-1/2 -translate-x-1/2 w-[80%] px-5 py-3 text-left flex flex-row items-center justify-start gap-2 bg-white/40 dark:bg-white/20 backdrop-blur-[20px] rounded-[5px] outline-none'>
-                  <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Developer Tools</div>
+                  <div className='font-libre text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Developer Tools</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
                 <div className='flex items-end justify-center w-full h-full p-6 py-20 hover:cursor-grab active:cursor-grabbing'>
@@ -65,7 +65,7 @@ const Skills = () => {
               <div className='flex flex-col h-full w-full border border-[#D3D4D7] dark:border-[#35363A] bg-[#E8E8EC] dark:bg-[#111113] object-cover rounded-[3px] transform rotate-[-3deg] z-[1]'>
                 <Image src={'/4.webp'} alt="" width={296} height={444} loading='lazy' draggable={true} className='absolute top-0 left-0 h-full w-full object-cover opacity-80 dark:opacity-60 hover:opacity-100 rounded-[2px]'/>
                 <div className='absolute top-4 left-1/2 -translate-x-1/2 w-[80%] px-5 py-3 text-left flex flex-row items-center justify-start gap-2 bg-white/40 dark:bg-white/20 backdrop-blur-[20px] rounded-[5px] outline-none'>
-                  <div className='font-["Libre_Franklin"] text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Libraries</div>
+                  <div className='font-libre text-base font-normal leading-[20px] text-[#1C2024] dark:text-[#EDEEF0]'>Libraries</div>
                   <div className='z-[2] h-[6px] w-[6px] rounded-full bg-[#35363A] dark:bg-[#E8E8EC]'></div>
                 </div>
                 <div className='flex items-end justify-center w-full h-full p-6 py-[84px] hover:cursor-grab active:cursor-grabbing'>

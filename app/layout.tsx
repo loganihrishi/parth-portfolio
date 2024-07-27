@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Libre_Franklin, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const libre_Franklin = Libre_Franklin({ 
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-libre-franklin",
+});
+
+const jetBrains_Mono = JetBrains_Mono({ 
+  subsets: ["latin"], 
+  weight: "400", 
+  variable: "--font-jetbrains-mono" 
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${libre_Franklin.variable} ${jetBrains_Mono.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
