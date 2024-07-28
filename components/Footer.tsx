@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
           <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
           <div className="absolute bottom-[-120px] w-full flex justify-center items-end pb-4">
-            <div className="font-['Bluu_Next_Bold'] text-[300px] text-[#F6F6F6] dark:text-[#19191B] text-center">
+            <div className="font-bluu text-[300px] text-[#F6F6F6] dark:text-[#19191B] text-center">
               PARTH
             </div>
           </div>

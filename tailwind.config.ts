@@ -24,6 +24,7 @@ const config: Config = {
         jetbrains: ['var(--font-jetbrains-mono)'],
         libre: ['var(--font-libre-franklin)'],
         caveat: ['var(--font-caveat)'],
+        bluu: ['var(--font-bluu-next)'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -115,10 +115,10 @@ const About: React.FC = () => {
               style={{ width: 'calc(100% - 8px)', height: 'calc(100% - 60px)' }}
             >
               <div className='w-full h-full flex flex-col items-center justify-center gap-12'>
-                <h1 className='w-[700px] text-balance text-center font-["Bluu_Next"] text-[89px] tracking-[-1.78px] leading-[80.1px] text-[#1C2024] dark:text-[#EDEEF0]'>Learning Innovating & Exploring.</h1>
+                <h1 className='w-[700px] text-balance text-center font-bluu text-[89px] tracking-[-1.78px] leading-[80.1px] text-[#1C2024] dark:text-[#EDEEF0]'>Learning Innovating & Exploring.</h1>
                 <div className='relative w-[580px] inline -space-x-1'> 
-                  <span className='inline h-auto pr-[2px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-transparent'>A</span>     
-                  <span className='absolute left-1 top-[10px] text-balance text-center font-["Bluu_Next"] leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>{aboutData.firstLetter}</span>     
+                  <span className='inline h-auto pr-[2px] text-balance text-center font-bluu leading-7 text-[42px] text-transparent'>A</span>     
+                  <span className='absolute left-1 top-[10px] text-balance text-center font-bluu leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>{aboutData.firstLetter}</span>     
                   <p className='inline text-balance text-left font-libre text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
                   <p className='block text-balance text-left pt-2 font-libre text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about2}</p>
                 </div>

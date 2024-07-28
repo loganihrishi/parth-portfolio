@@ -25,7 +25,7 @@ const Testimonial = () => {
               <Marquee speed={50}>
                 {testimonialsLeft.map((testimonial, index) => (
                   <div key={index} className="flex flex-row gap-4 mx-[3px] px-4 py-2 items-center justify-center bg-[#F0F0F3] dark:bg-[#18191B] w-auto h-12 rounded-[3px] overflow-visible">
-                    <h4 className="text-[#1C2024] dark:text-[#C8C9CD] font-['Bluu_Next'] text-xl font-thin tracking-tight">
+                    <h4 className="text-[#1C2024] dark:text-[#C8C9CD] font-bluu text-xl font-thin tracking-tight">
                       “{testimonial.message}”
                     </h4>
                     <Image src={testimonial.img} alt="" height={32} width={32}></Image>
@@ -36,7 +36,7 @@ const Testimonial = () => {
               <Marquee speed={50} direction="right">
                 {testimonialsRight.map((testimonial, index) => (
                   <div key={index} className="flex flex-row gap-4 mx-[3px] px-4 py-2 items-center justify-center bg-[#F0F0F3] dark:bg-[#18191B] w-auto h-12 rounded-[3px] overflow-visible">
-                    <h4 className="text-[#1C2024] dark:text-[#C8C9CD] font-['Bluu_Next'] text-xl font-thin tracking-tight">
+                    <h4 className="text-[#1C2024] dark:text-[#C8C9CD] font-bluu text-xl font-thin tracking-tight">
                       “{testimonial.message}”
                     </h4>
                     <Image src={testimonial.img} alt="" height={32} width={32}></Image>

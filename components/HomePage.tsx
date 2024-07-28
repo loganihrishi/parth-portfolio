@@ -109,7 +109,7 @@ const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
           </div>
 
           <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>
-            <h1 className='font-["Bluu_Next"] text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
+            <h1 className='font-bluu text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
               Hi, I&apos;m Parth.
             </h1>
             <div className='font-libre max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
