@@ -4,30 +4,34 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 interface HomePageProps {
-  serverTime: string;
-  offset: number;
+  clientTimeOffset: number;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ serverTime, offset }) => {
+const HomePage: React.FC<HomePageProps> = ({ clientTimeOffset }) => {
+  const [time, setTime] = useState('');
+  const [offset, setOffset] = useState(clientTimeOffset);
+
   const formatTime = (date: Date, offset: number) => {
-    const utcTime = date.getTime() + (date.getTimezoneOffset() * 60000);
-    const localTime = new Date(utcTime + (3600000 * offset));
+    const utcTime = date.getTime() + date.getTimezoneOffset() * 60000;
+    const localTime = new Date(utcTime + 3600000 * offset);
     return localTime.toLocaleTimeString('en-GB'); // 'en-GB' locale for 24-hour format
   };
 
-  const [time, setTime] = useState(formatTime(new Date(serverTime), offset));
-  const gmtValue = offset >= 0 ? `+${offset}` : `${offset}`;
-
   useEffect(() => {
+    const clientOffset = clientTimeOffset;
+    setOffset(clientOffset);
+
     const updateTime = () => {
-      setTime(formatTime(new Date(), offset));
+      setTime(formatTime(new Date(), clientOffset));
     };
 
     updateTime();
     const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
-  }, [offset]);
+  }, [clientTimeOffset]);
+
+  const gmtValue = offset >= 0 ? `+${offset}` : `${offset}`;
 
   const renderTimeline = () => {
     const startTop = 30;
