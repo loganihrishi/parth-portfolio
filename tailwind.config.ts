@@ -23,6 +23,7 @@ const config: Config = {
       fontFamily: {
         jetbrains: ['var(--font-jetbrains-mono)'],
         libre: ['var(--font-libre-franklin)'],
+        caveat: ['var(--font-caveat)'],
       },
       colors: {
         border: "hsl(var(--border))",
