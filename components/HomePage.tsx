@@ -3,13 +3,9 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-interface HomePageProps {
-  clientTimeOffset: number;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ clientTimeOffset }) => {
+const HomePage: React.FC = () => {
   const [time, setTime] = useState('');
-  const [offset, setOffset] = useState(clientTimeOffset);
+  const [offset, setOffset] = useState(0);
 
   const formatTime = (date: Date, offset: number) => {
     const utcTime = date.getTime() + date.getTimezoneOffset() * 60000;
@@ -18,7 +14,8 @@ const HomePage: React.FC<HomePageProps> = ({ clientTimeOffset }) => {
   };
 
   useEffect(() => {
-    const clientOffset = clientTimeOffset;
+    const getClientOffset = () => new Date().getTimezoneOffset() / -60;
+    const clientOffset = getClientOffset();
     setOffset(clientOffset);
 
     const updateTime = () => {
@@ -29,7 +26,7 @@ const HomePage: React.FC<HomePageProps> = ({ clientTimeOffset }) => {
     const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
-  }, [clientTimeOffset]);
+  }, []);
 
   const gmtValue = offset >= 0 ? `+${offset}` : `${offset}`;
 
