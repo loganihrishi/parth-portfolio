@@ -83,9 +83,9 @@ const About: React.FC = () => {
                 dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
                 onDragStart={handleDragStart1}
                 onDragEnd={handleDragEnd1}
-                style={{ x: isDragging1 ? x1 : dx1, y: isDragging1 ? y1 : dy1 }}
+                style={{ x: isDragging1 ? x1 : dx1, y: isDragging1 ? y1 : dy1, rotate: '-6deg' }}
                 transition={{ type: 'spring', duration: 1 }}
-                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[-6deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[1.02] active:rotate-[5deg]' 
+                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing' 
               />
             </div>
             <div className='absolute top-[322px] right-7 z-10 rounded-[3px]'>
@@ -103,9 +103,9 @@ const About: React.FC = () => {
                 dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
                 onDragStart={handleDragStart2}
                 onDragEnd={handleDragEnd2}
-                style={{ x: isDragging2 ? x2 : dx2, y: isDragging2 ? y2 : dy2 }}
+                style={{ x: isDragging2 ? x2 : dx2, y: isDragging2 ? y2 : dy2, rotate: '4deg' }}
                 transition={{ type: 'spring', duration: 1 }}
-                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] transform rotate-[4deg] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
+                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
               />
             </div>
 
@@ -119,8 +119,8 @@ const About: React.FC = () => {
                 <div className='relative w-[580px] inline -space-x-1'> 
                   <span className='inline h-auto pr-[2px] text-balance text-center font-bluu leading-7 text-[42px] text-transparent'>A</span>     
                   <span className='absolute left-1 top-[10px] text-balance text-center font-bluu leading-7 text-[42px] text-[#1C2024] dark:text-[#EDEEF0]'>{aboutData.firstLetter}</span>     
-                  <p className='inline text-balance text-left font-libre text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
-                  <p className='block text-balance text-left pt-2 font-libre text-lg leading-[28.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about2}</p>
+                  <p className='inline text-balance text-left font-libre text-lg leading-[30.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about}</p>
+                  <p className='block text-balance text-left pl-1 font-libre text-lg leading-[30.8px] text-[#81838D] dark:text-[#777B84]'>{aboutData.about2}</p>
                 </div>
               </div>
             </div>

@@ -46,7 +46,7 @@ export const aboutData = {
     img1: '/studying.jpeg',
     img2: '/handstand.jpeg',
     firstLetter: "A",
-    about: "software developer with an adventurous spirit, I thrive on pushing the boundaries of the digital realm. My passion for creating custom websites and applications is fueled by a love for exploration and innovation. From developing web-based simulations for Mitra Biotechnologies to co-founding Subletify for UBC students, I immerse myself in projects that blend creativity with technology. Driven by a desire to craft engaging, user-centric experiences, I approach every project with enthusiasm and a dynamic mindset.",
+    about: "software developer with an adventurous spirit, I thrive on pushing the boundaries of the digital realm. My passion for creating custom websites and applications is fueled by a love for exploration and innovation. From developing web-based simulations for Mitra Biotechnologies to co-founding Subletify for UBC students, I immerse myself in projects that blend creativity with technology. Driven by a desire to craft engaging, user-centric experiences, I approach every project with enthusiasm and a dynamic mindset always wanting to learn more.",
     about2: "If you're looking for a developer who brings a unique blend of creativity, technical expertise, and a global perspective to the table, then look no further! Whether you're a multinational corporation or a scrappy startup, I'm always ready to dive in and create something amazing. So let's connect, collaborate, and make some magic happen!"
 }
 
