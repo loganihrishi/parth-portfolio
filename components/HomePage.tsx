@@ -58,18 +58,24 @@ const HomePage: React.FC = () => {
       y: 0,
       transition: {
         type: 'spring',
-        stiffness: 50,
-        damping: 10,
-        staggerChildren: 0.2,
+        stiffness: 30,
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
       },
     },
   };
   
   const childVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 30,
+      }
+    },
   };
-
   return (
     <section id="home" className="relative bg-[#161617] h-full pt-6 w-full">
       <div className="bg-white dark:bg-[#111113] h-full mx-6 rounded-t-xl">
