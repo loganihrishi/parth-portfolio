@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
   };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: -50 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
   };
   
   const childVariants = {
-    hidden: { opacity: 0, y: -50 },
+    hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
       y: 0,
