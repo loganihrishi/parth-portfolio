@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const HomePage: React.FC = () => {
   const [time, setTime] = useState('');
@@ -48,6 +49,25 @@ const HomePage: React.FC = () => {
     }
 
     return timeline;
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 50,
+        damping: 10,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  
+  const childVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -103,13 +123,18 @@ const HomePage: React.FC = () => {
         </div>
 
         {/* Main content */}
-        <div className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'>
+        <motion.div
+          className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
           <div className='rounded-full border ring-[#E8E8EC]'>
             <Image src={'/profile_dark.svg'} alt="" height={104} width={104} className='hidden dark:inline' />
             <Image src={'/profile_light.svg'} alt="" height={104} width={104} className='inline dark:hidden' />
           </div>
 
-          <div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center'>
+          <motion.div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center' variants={childVariants}>
             <h1 className='font-bluu text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
               Hi, I&apos;m Parth.
             </h1>
@@ -123,8 +148,8 @@ const HomePage: React.FC = () => {
                 Let&apos;s build something incredible together – and maybe swap a few travel stories along the way!
               </p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
