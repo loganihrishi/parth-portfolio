@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useSpring, Variants } from 'framer-motion';
 import { aboutData } from '../data/index'
 
 const About: React.FC = () => {
@@ -44,6 +44,34 @@ const About: React.FC = () => {
     y2.set(originalY);
   };
 
+  const leftImgVariants: Variants = {
+    offscreen: {
+      x: -400
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+        duration: 0.5
+      }
+    }
+  };
+
+  const rightImgVariants: Variants = {
+    offscreen: {
+      x: 450
+    },
+    onscreen: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.1,
+        duration: 0.4
+      }
+    }
+  };
+
   return (
     <section id='about' className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-6">
@@ -68,7 +96,12 @@ const About: React.FC = () => {
             <p className='absolute top-[200px] left-11 z-10 -rotate-90 font-jetbrains text-[10px] font-normal leading-[12px] text-[#81838D] dark:text-[#777B84]'>ABOUT ME</p>
 
             {/* PHOTOS */}
-            <div className='absolute top-[392px] -left-14 z-10 rounded-[3px]'>
+            <motion.div 
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.65 }}
+              className='absolute top-[392px] -left-14 z-10 rounded-[3px]'
+            >
               <div className='flex items-center justify-center transform rotate-[-3deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-caveat font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
@@ -80,15 +113,20 @@ const About: React.FC = () => {
                 drag
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={1}
-                dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+                dragTransition={{ bounceStiffness: 10000, bounceDamping: 1000 }}
                 onDragStart={handleDragStart1}
                 onDragEnd={handleDragEnd1}
-                style={{ x: isDragging1 ? x1 : dx1, y: isDragging1 ? y1 : dy1, rotate: '-6deg' }}
-                transition={{ type: 'spring', duration: 1 }}
+                style={{ x: isDragging1 ? x1 : dx1, y: isDragging1 ? y1 : dy1, rotate: '-6deg'}}
+                variants={leftImgVariants}
                 className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing' 
               />
-            </div>
-            <div className='absolute top-[322px] right-7 z-10 rounded-[3px]'>
+            </motion.div>
+            <motion.div 
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+              className='absolute top-[322px] right-7 z-10 rounded-[3px]'
+            >
               <div className='flex items-center justify-center transform rotate-[2deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-caveat font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
               </div>
@@ -100,14 +138,14 @@ const About: React.FC = () => {
                 drag
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 dragElastic={1}
-                dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+                dragTransition={{ bounceStiffness: 10000, bounceDamping: 1000 }}
                 onDragStart={handleDragStart2}
                 onDragEnd={handleDragEnd2}
-                style={{ x: isDragging2 ? x2 : dx2, y: isDragging2 ? y2 : dy2, rotate: '4deg' }}
-                transition={{ type: 'spring', duration: 1 }}
-                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing active:scale-[0.98] active:rotate-[5deg]' 
+                style={{ x: isDragging2 ? x2 : dx2, y: isDragging2 ? y2 : dy2, rotate: '4deg'}}
+                variants={rightImgVariants}
+                className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing' 
               />
-            </div>
+            </motion.div>
 
             {/* Main Content - About Me */}
             <div 

@@ -76,6 +76,7 @@ const HomePage: React.FC = () => {
       }
     },
   };
+  
   return (
     <section id="home" className="relative bg-[#161617] h-full pt-6 w-full">
       <div className="bg-white dark:bg-[#111113] h-full mx-6 rounded-t-xl">
