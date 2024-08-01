@@ -79,7 +79,7 @@
       rgba(0, 0, 0, 0)
     );
   }
-  
+
   @media (max-width: 1199px) {
     .left-box,
     .right-box {
@@ -89,5 +89,10 @@
       min-width: 0;
       flex-grow: 1;
     }
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 }

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { socialMedia } from "@/data";
+import Link from "next/link";
 
 const Footer = () => {
   // const handleDownload = async () => {
@@ -56,6 +57,7 @@ const Footer = () => {
             <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/3 h-full flex justify-end'>
               <div className='flex flex-row items-center justify-end w-[335px] h-full text-[#EDEEF0] gap-1 pr-4'>
+              <Link href="/resume">
                 <button onClick={handleDownload} className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3px] bg-white dark:bg-[#101012] px-3 py-1 text-xs text-[#1C2024] dark:text-[#EDEEF0] backdrop-blur-3xl gap-[6px]">
@@ -64,6 +66,7 @@ const Footer = () => {
                     Download Current CV
                   </span>
                 </button>
+                </Link>
                 <a href="mailto:parthrp15@gmail.com" target="_blank" rel="noopener noreferrer">
                   <button className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
