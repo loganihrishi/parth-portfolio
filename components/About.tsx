@@ -118,6 +118,11 @@ const About: React.FC = () => {
                 onDragEnd={handleDragEnd1}
                 style={{ x: isDragging1 ? x1 : dx1, y: isDragging1 ? y1 : dy1, rotate: '-6deg'}}
                 variants={leftImgVariants}
+                whileTap={{
+                  scale: 0.98,
+                  rotate: '-4deg',
+                  transition: { type: "spring", duration: 0.2 },
+                }}
                 className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing' 
               />
             </motion.div>
@@ -143,6 +148,11 @@ const About: React.FC = () => {
                 onDragEnd={handleDragEnd2}
                 style={{ x: isDragging2 ? x2 : dx2, y: isDragging2 ? y2 : dy2, rotate: '4deg'}}
                 variants={rightImgVariants}
+                whileTap={{
+                  scale: 0.98,
+                  rotate: '6deg',
+                  transition: { type: "spring", duration: 0.2 },
+                }}
                 className='absolute top-0 left-0 h-full w-full object-cover rounded-[3px] z-50 hover:cursor-grab active:cursor-grabbing' 
               />
             </motion.div>

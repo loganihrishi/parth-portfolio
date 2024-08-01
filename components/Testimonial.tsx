@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import img2 from "/img2.svg";
 import Marquee from "react-fast-marquee";
 import { testimonialsLeft, testimonialsRight } from '../data/index';
+// import { ParallaxText } from './ui/ParallaxText';
 
 const Testimonial = () => {
   return (
@@ -32,6 +31,16 @@ const Testimonial = () => {
                   </div>
                 ))}
               </Marquee>
+              {/* <ParallaxText baseVelocity={-5}>
+                <div>
+                  <div className="flex flex-row gap-4 mx-[3px] px-4 py-2 items-center justify-center bg-[#F0F0F3] dark:bg-[#18191B] w-auto h-12 rounded-[3px] overflow-visible">
+                    <h4 className="text-[#1C2024] dark:text-[#C8C9CD] font-bluu text-xl font-thin tracking-tight">
+                      “ghjkvbnmkjshfjkv”
+                    </h4>
+                    <Image src={testimonial.img} alt="" height={32} width={32}></Image>
+                  </div>
+                </div>
+              </ParallaxText> */}
               {/* right side going */}
               <Marquee speed={50} direction="right">
                 {testimonialsRight.map((testimonial, index) => (

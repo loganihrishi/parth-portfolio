@@ -107,4 +107,9 @@ export const socialMedia = [
       img: "/link.svg",
       link: "https://www.linkedin.com/in/parth-patel-433703266/",
     },
+    {
+      id: 3,
+      img: "/insta.svg",
+      link: "https://www.instagram.com/_parth_1921/",
+    }
   ];
