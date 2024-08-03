@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import Image from "next/image";
 
 export const ContainerScroll = ({
 //   titleComponent,
@@ -38,7 +37,7 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="-mt-[20rem] -mb-[20rem] h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
+      className="-mt-[12rem] sm:-mt-[20rem] -mb-[10rem] overflow-hidden sm:-mb-[20rem] h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
       ref={containerRef}
     >
       <div
@@ -53,10 +52,13 @@ export const ContainerScroll = ({
 						scale,
 						translateY: translate,
 					}}
-					className="skills-wrapper mt-24 relative flex flex-row gap-8 justify-around w-[1280px] h-full py-[120px]"
+					className="max-[640px]:hidden skills-wrapper mt-24 relative flex sm:flex-row gap-8 justify-around w-full sm:w-[1280px] h-full py-[120px]"
         >
           {children}
         </motion.div>
+        <div className="sm:hidden skills-wrapper mt-24 relative flex flex-row gap-8 justify-around w-[80%] h-full py-[120px]">
+          {children}
+        </div>
       </div>
     </div>
   );

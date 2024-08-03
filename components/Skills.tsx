@@ -8,11 +8,11 @@ import { ContainerScroll } from "./ui/container-scroll-animation";
 const Skills = () => {
   return (
     <section className="relative bg-[#161617] h-full w-full flex flex-col">
-      <div className="bg-white dark:bg-[#111113] h-full mx-6 pt-20 flex items-center justify-center">
-        <div className='absolute top-[90px] font-bluu text-5xl uppercase text-[#1C2024] dark:text-[#EDEEF0]'>my skills.</div>
-        <div className='absolute top-[164px] left-[300px] rotate-[-5deg] z-[2] font-caveat text-base text-[#81838D] dark:text-[#777B84]'>Pssst...You can drag the skills</div>
-        <Image src={"/arrow_dark.svg"} alt="" height={25} width={25} className='absolute top-[190px] left-[400px] hidden dark:inline'/>
-        <Image src={"/arrow_light.svg"} alt="" height={25} width={25} className='absolute top-[190px] left-[400px] inline dark:hidden'/>
+      <div className="bg-white dark:bg-[#111113] h-full mx-[6px] sm:mx-6 pt-20 flex items-center justify-center">
+        <div className='absolute top-[90px] font-bluu text-3xl sm:text-5xl uppercase text-[#1C2024] dark:text-[#EDEEF0]'>my skills.</div>
+        <div className='absolute max-[640px]:hidden top-[164px] left-[300px] rotate-[-5deg] z-[2] font-caveat text-base text-[#81838D] dark:text-[#777B84]'>Pssst...You can drag the skills</div>
+        <Image src={"/arrow_dark.svg"} alt="" height={25} width={25} className='absolute max-[640px]:hidden top-[190px] left-[400px] sm:hidden sm:dark:inline'/>
+        <Image src={"/arrow_light.svg"} alt="" height={25} width={25} className='absolute max-[640px]:hidden top-[190px] left-[400px] sm:inline sm:dark:hidden'/>
         
         {/* SKILLS GRID */}
         <ContainerScroll>

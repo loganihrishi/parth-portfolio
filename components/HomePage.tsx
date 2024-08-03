@@ -43,8 +43,8 @@ const HomePage: React.FC = () => {
       const label = labels[i];
 
       timeline.push(
-        <div key={`line-${i}`} className='absolute h-[1px] w-[6px] bg-[#E8E8EC] dark:bg-[#222225] min-[1200px]:right-[3px] right-[-7px]' style={{ top: `${topValue}px`}}></div>,
-        <p key={`label-${i}`} className='absolute text-[8px] min-[1200px]:-rotate-90 rotate-90 text-[#C8C9CD] dark:text-[#3E4044] min-[1200px]:right-[12px] right-[-22px]' style={{ top: `${topValue - 5}px` }}>{label}</p>
+        <div key={`line-${i}`} className='max-[640px]:hidden absolute h-[1px] w-[6px] bg-[#E8E8EC] dark:bg-[#222225] min-[1200px]:right-[3px] right-[-7px]' style={{ top: `${topValue}px`}}></div>,
+        <p key={`label-${i}`} className='max-[640px]:hidden absolute text-[8px] min-[1200px]:-rotate-90 rotate-90 text-[#C8C9CD] dark:text-[#3E4044] min-[1200px]:right-[12px] right-[-22px]' style={{ top: `${topValue - 5}px` }}>{label}</p>
       );
     }
 
@@ -78,43 +78,42 @@ const HomePage: React.FC = () => {
   };
   
   return (
-    <section id="home" className="relative bg-[#161617] h-full pt-6 w-full">
-      <div className="bg-white dark:bg-[#111113] h-full mx-6 rounded-t-xl">
+    <section id="home" className="relative bg-[#161617] h-full pt-[6px] sm:pt-6 w-full">
+      <div className="bg-white dark:bg-[#111113] h-full mx-[6px] sm:mx-6 rounded-t-[6px] sm:rounded-t-xl">
         {/* Background setup */}
-        <div className='topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+        <div className='max-[640px]:hidden topbox relative flex justify-between w-full h-[60px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
           <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
             {renderTimeline()}
-            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+            <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
           <div className='center-box h-full grow min-w-[714px] min-[1200px]:min-w-[1080px]'></div>
           <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+            <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
         </div>
 
-        <div className='centerbox relative flex justify-between w-full h-[602px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
-            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+        <div className='centerbox relative flex justify-between w-full h-[668px] sm:h-[602px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
+          <div className='relative left-box max-[640px]:max-w-[6px] w-full h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
           <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
-            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-            <div className='relative basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-            <div className='basis-1/3 h-full'></div>
+            <div className='basis-1/2 sm:basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='max-[640px]:hidden relative basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='basis-1/2 sm:basis-1/3 h-full'></div>
           </div>
-          <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='relative right-box max-[640px]:max-w-[6px] w-full h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
         </div>
 
         <div className='bottombox relative flex justify-between w-full h-[44px] border-b border-solid border-[#E8E8EC] dark:border-[#222225]'>
-          <div className='relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
-            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='relative left-box max-[640px]:max-w-[6px] w-full h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
           <div className='relative center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
-            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'>
-            </div>
-            <div className='basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
-            <div className='basis-1/3 h-full'></div>
+            <div className='basis-1/2 sm:basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='max-[640px]:hidden basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
+            <div className='basis-1/2 sm:basis-1/3 h-full'></div>
             <div className='absolute top-0 left-0 w-full h-full flex flex-row items-center justify-between p-4 text-[#81838D] dark:text-[#777B84] text-[10px] leading-[12px] font-jetbrains font-normal'>
               <p className='capitalize text-left z-[2]'>
                 GLOBAL CITIZEN
@@ -124,14 +123,14 @@ const HomePage: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className='relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
-            <div className='absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
+          <div className='relative right-box max-[640px]:max-w-[6px] w-full h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'>
+            <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] left-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
         </div>
 
         {/* Main content */}
         <motion.div
-          className='absolute inset-0 flex flex-col justify-center items-center top-[-14px]'
+          className='absolute inset-0 flex flex-col justify-center items-center top-[2%] sm:top-[13%] sm:p-0 p-4'
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -141,18 +140,18 @@ const HomePage: React.FC = () => {
             <Image src={'/profile_light.svg'} alt="" height={104} width={104} className='inline dark:hidden' />
           </div>
 
-          <motion.div className='flex flex-col gap-[10px] items-center justify-center max-w-[860px] mt-9 text-center' variants={childVariants}>
-            <h1 className='font-bluu text-[48px] sm:text-[60px] lg:text-[89px] leading-none font-normal text-[#1C2024] dark:text-white'>
+          <motion.div className='flex flex-col gap-4 sm:gap-[10px] items-center justify-center max-w-[860px] mt-7 sm:mt-9 text-center sm:p-0 p-4' variants={childVariants}>
+            <h1 className='font-bluu text-[44px] sm:text-[60px] lg:text-[89px] leading-[48px] sm:leading-none font-normal text-[#1C2024] dark:text-white'>
               Hi, I&apos;m Parth.
             </h1>
-            <div className='font-libre max-w-[640px] text-base sm:text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
+            <div className='font-libre max-w-[640px] text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
               <p>
-                I am a full stack developer focused on front-end development and design. Passionate about creating
+                A full stack developer focused on front-end development and design. Passionate about creating
                 visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills
                 to enhance my work.
               </p>
               <p>
-                Let&apos;s build something incredible together – and maybe swap a few travel stories along the way!
+                Let&apos;s build something incredible together – and maybe even swap a few travel stories along the way!
               </p>
             </div>
           </motion.div>
