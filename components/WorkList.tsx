@@ -61,7 +61,7 @@ const WorkList = () => {
               </CardContainer>
             </div>
 
-            <div className='flex flex-col gap-4 p-1'>
+            <div className='sm:hidden flex flex-col gap-4 p-1'>
               <div className='flex flex-col justify-center items-center'>
                 <div className='flex flex-col max-w-[360px] h-fit justify-start items-start p-4 pr-8 gap-2'>
                   <div className='flex flex-row gap-2 overflow-hidden'>

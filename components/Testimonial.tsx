@@ -10,7 +10,7 @@ const Testimonial = () => {
   return (
     <section className="relative bg-[#161617] h-full w-full flex flex-col">
       <div className="bg-white dark:bg-[#111113] h-full mx-[6px] sm:mx-6">
-        <div className='backgroundbox relative flex justify-between w-full h-[150px] overflow-hidden'>
+        <div className='backgroundbox relative flex justify-between w-full h-[150px] overflow-x-clip'>
           <div className='relative left-box max-[640px]:max-w-[6px] w-full h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'>
             <div className='max-[640px]:hidden absolute z-[2] h-[5px] w-[5px] rounded-full bg-[#81838D] dark:bg-[#777B84] bottom-[-2px] right-[-3px] ring-white dark:ring-[#111113] ring-2'></div>
           </div>
