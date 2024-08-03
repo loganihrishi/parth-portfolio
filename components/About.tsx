@@ -100,7 +100,7 @@ const About: React.FC = () => {
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.65 }}
-              className='absolute top-[450px] sm:top-[392px] -left-20 sm:-left-14 z-10 rounded-[3px]'
+              className='absolute top-[450px] sm:top-[392px] -left-20 sm:-left-14 z-10 rounded-[3px] max-[640px]:scale-90'
             >
               <div className='flex items-center justify-center transform rotate-[-3deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-caveat font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
@@ -130,7 +130,7 @@ const About: React.FC = () => {
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.8 }}
-              className='absolute top-[700px] sm:top-[322px] -right-14 sm:right-7 z-10 rounded-[3px]'
+              className='absolute top-[700px] sm:top-[322px] -right-14 sm:right-7 z-10 rounded-[3px] max-[640px]:scale-90'
             >
               <div className='flex items-center justify-center transform rotate-[2deg] rounded-[5px] w-[200px] h-[300px] border border-dashed border-[#D3D3DC] dark:border-[#303135] backdrop-blur-[20px] bg-[#E8E8EC] dark:bg-[#222225]'>
                 <p className='text-base font-caveat font-normal leading-[18px] text-[#1C2024] dark:text-[#EDEEF0] cursor-pointer'>Solving Rubik&apos;s Cube</p>
