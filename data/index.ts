@@ -5,6 +5,7 @@ export const navItems = [
     { name: "Contact", link: "#contact" },
 ];
 
+
 export const skillSets = [
     {
         type: "Languages",
