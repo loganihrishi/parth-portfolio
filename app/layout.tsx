@@ -33,7 +33,7 @@ const bluu_Next = Bluu_Next({
 })
 
 export const metadata: Metadata = {
-  title: "Hrisi's Website",
+  title: "Hrishi's Website",
   description: "Developed by HL",
 };
 
