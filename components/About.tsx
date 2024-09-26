@@ -107,7 +107,7 @@ const About: React.FC = () => {
               </div>
               <motion.img
                 src={aboutData.img1} 
-                alt="Parth studying" 
+                alt="Logani at beach" 
                 height={300} 
                 width={200} 
                 drag
@@ -137,7 +137,7 @@ const About: React.FC = () => {
               </div>
               <motion.img
                 src={aboutData.img2} 
-                alt="Parth doing handstand on Flora Peak" 
+                alt="Logani at flora peak" 
                 height={300} 
                 width={200} 
                 drag

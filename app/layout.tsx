@@ -33,8 +33,8 @@ const bluu_Next = Bluu_Next({
 })
 
 export const metadata: Metadata = {
-  title: "Parth's Portfolio",
-  description: "Developed by Parth Patel",
+  title: "Hrisi's Website",
+  description: "Developed by HL",
 };
 
 export default function RootLayout({
