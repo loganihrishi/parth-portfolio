@@ -17,7 +17,9 @@ const WorkList = () => {
                 <div className='flex flex-col max-w-[360px] h-fit justify-start items-start p-4 pr-8 gap-2'>
                   <div className='flex flex-row gap-2 overflow-hidden'>
                     <Image src={workList.logo} alt="" height={28} width={28} loading='lazy' className='w-7 h-7 rounded-[4px]'/>
-                    <p className='font-bluu text-2xl text-[#1C2024] dark:text-[#EDEEF0]'>{workList.title}</p>  
+                    <a href={workList.project_url} target= "_blank" className='no-underline'>
+      <p className='font-bluu text-2xl text-[#1C2024] dark:text-[#EDEEF0]'>{workList.title}</p>
+</a>
                   </div>
                   <span className='font-libre text-sm leading-[18px] text-[#81838D] dark:text-[#777B84]'>
                     {workList.description}
@@ -90,15 +92,17 @@ const WorkList = () => {
                       <div className='w-full h-full border border-[#D3D4D7] dark:border-[#35363A] rounded-[3px] z-50'>
                         <div className="relative w-full h-full transform origin-center rounded-tl-[0.495708%] rounded-tr-[0.495708%]">
                           <div className="absolute inset-0 rounded-tl-[0.495708%] rounded-tr-[0.495708%] transform transition-transform duration-300 ease-in-out scale-[0.85] translate-y-[7.5%] hover:scale-[1] hover:translate-y-0">
-                            <Image
-                              sizes="calc(min(960px, 100vw) * 0.85)"
-                              src={workList.img}
-                              alt=""
-                              layout="fill"
-                              objectFit="cover"
-                              objectPosition="50% 0%"
-                              className="rounded-tl-[0.495708%] rounded-tr-[0.495708%] opacity-100"
-                            />
+                          <a href={workList.project_url}>
+                              <Image
+                                  sizes="calc(min(960px, 100vw) * 0.85)"
+                                  src={workList.img}
+                                  alt=""
+                                  layout="fill"
+                                  objectFit="cover"
+                                  objectPosition="50% 0%"
+                                  className="rounded-tl-[0.495708%] rounded-tr-[0.495708%] opacity-100"
+                                  />
+                                </a>
                           </div>
                         </div>
                       </div>

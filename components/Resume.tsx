@@ -14,7 +14,7 @@ const Resume = () => {
   }, []);
 
   const handleDownload = () => {
-    const url = 'https://threads-clone-local-parth.s3.eu-north-1.amazonaws.com/Parths_Resume.pdf';
+    const url = 'https://docs.google.com/document/d/1z1FCToE24ocjeD984sE6zEvEhFdKjzS0jPnFZCXh-SU/edit?usp=sharing';
     const a = document.createElement('a');
     a.href = url;
     a.target = '_blank';

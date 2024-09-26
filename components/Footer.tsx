@@ -30,7 +30,7 @@ const Footer = () => {
   // const router = useRouter();
   
   const handleDownload = () => {
-    const url = 'https://threads-clone-local-parth.s3.eu-north-1.amazonaws.com/Parths_Resume.pdf';
+    const url = 'https://drive.google.com/uc?export=download&id=1bkKOoogZlGUoZONLM2Y27f50yklNxz7B';
     const a = document.createElement('a');
     a.href = url;
     a.target = '_blank';
@@ -77,7 +77,7 @@ const Footer = () => {
                       </span>
                     </button>
                   </Link>
-                  <a href="mailto:parthrp15@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <a href="mailto:loganihrishi@gmail.com" target="_blank" rel="noopener noreferrer">
                     <button className="relative inline-flex h-[36px] overflow-hidden rounded-[3px] p-[1px] focus:outline-none focus:ring-2 focus:ring-transparent">
                       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#161617_50%,#E2CBFF_100%)]" />
                       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3px] bg-white dark:bg-[#101012] px-3 py-1 text-xs text-[#1C2024] dark:text-[#EDEEF0] backdrop-blur-3xl gap-[6px]">
@@ -104,7 +104,7 @@ const Footer = () => {
           <div className='max-[640px]:max-w-[6px] relative right-box h-full flex-1 border-l border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
           <div className="absolute top-4 sm:bottom-[-120px] w-full flex justify-center items-end pb-4">
             <div className="font-bluu text-[90px] sm:text-[300px] text-[#F6F6F6] dark:text-[#19191B] text-center">
-              PARTH
+              LOGANI
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ const Footer = () => {
           <div className='max-[640px]:min-w-[6px] relative left-box h-full flex-1 border-r border-solid border-[#E8E8EC] dark:border-[#222225]'></div>
           <div className='center-box flex flex-row grow min-w-[714px] min-[1200px]:min-w-[1080px]'>
             <div className='basis-1/2 sm:basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225] flex items-center justify-start pl-4'>
-              <p className='text-[#81838D] dark:text-[#777B84] text-xs font-light'>All rights reserved © 2024 parth.design</p>
+             
             </div>
             <div className='max-[640px]:hidden basis-1/3 h-full border-r border-dashed border-[#E8E8EC] dark:border-[#222225]'></div>
             <div className='basis-1/2 sm:basis-1/3 h-full flex items-center justify-end pr-4'>

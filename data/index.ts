@@ -27,28 +27,48 @@ export const skillSets = [
 
 export const workLists = [
     {
-        logo: "/mitrabiotechnologies_logo.jpeg", 
-        img: "/AssaySimFlow.png", 
-        title: "Mitra Biotechnologies",
-        description: "Development of web-based application simulations for paper-based diagnostic assays.",
-        tags: ["LANDING PAGE DESIGN", "DESIGN SYSTEMS", "ILLUSTRATION", "ANIMATION", "UI/UX"]
-    },
-    {
-        logo: "/subletify_logo.png",
-        img: "/subletify.png",
-        title: "Subletify",
-        description: "Simplifying sublet searches for UBC students, fostering a supportive and inclusive community.",
-        tags: ["CO-FOUNDER", "DEVELOPER", "PRODUCT MANAGER", "USER-FRIENDLY", "SUPPORT"]
+        logo: "/glasses.png",
+        img: "/jobgeek.png",
+        title: "JobGeek",
+        description: "Simplifying job searches and tracking for anyone who wnats to stay organized.",
+        tags: ["CO-FOUNDER", "DEVELOPER", "PRODUCT MANAGER", "USER-FRIENDLY", "SUPPORT"],
+        project_url: "https://jobgeek.vercel.app/"
     },
 
+    {
+        logo: "/glasses.png",
+        img: "/healthcare_thumbnail.jpeg",
+        title: "Healthcare Management System",
+        description: "Streamline healthcare operations with our Java-based Healthcare Management System. Enjoy reliable, tested performance, seamless JSON data management, and an intuitive Java Swing GUI for enhanced efficiency and data integrity.",
+        tags: ["HEALTHCARE", "JAVA", "OOP", "GUI", "JSON", "TESTING", "EFFICIENT"],
+        project_url: "https://github.com/loganihrishi/Healthcare-Management-System"
+    },
+
+    {
+        logo: "/glasses.png",
+        img: "/MazeEscaper.jpeg",
+        title: "MazeEscaper",
+        description: "Dive into MazeEscaper, a Java maze escape game featuring randomly generated mazes for a unique challenge each time. Navigate using intuitive arrow keys in a user-friendly GUI, and easily save your progress to continue later. Can you find the exit?",
+        tags: ["GAME DEVELOPER", "JAVA", "MAZE ESCAPE", "USER-FRIENDLY", "RANDOM MAZES", "SAVE FUNCTIONALITY"],
+        project_url: "https://github.com/loganihrishi/MazeEscaper/"
+    },
+
+    {
+        logo: "/glasses.png",
+        img: "/Infinite_Runner.jpeg",
+        title: "InfiniteRunner",
+        description: "Experience an engaging game crafted with **Python and Pygame**, featuring randomized obstacles for unique challenges. Enjoy seamless controls with an advanced gesture recognition system using **OpenCV**, processing inputs in under 100ms. Immerse yourself in captivating background music for a dynamic gaming experience.",
+        tags: ["GAME DEVELOPMENT", "PYTHON", "PYGAME", "OPEN CV", "GESTURE RECOGNITION", "AUDIO PROCESSING"],
+        project_url: "https://github.com/loganihrishi/MazeEscaper/"
+    }
 ];
 
 export const aboutData = {
-    img1: '/studying.jpeg',
-    img2: '/handstand.jpeg',
+    img1: '/logani_beach.jpg',
+    img2: '/loganihiking.jpg',
     firstLetter: "A",
-    about: "software developer with an adventurous spirit, I thrive on pushing the boundaries of the digital realm. My passion for creating custom websites and applications is fueled by a love for exploration and innovation. From developing web-based simulations for Mitra Biotechnologies to co-founding Subletify for UBC students, I immerse myself in projects that blend creativity with technology. Driven by a desire to craft engaging, user-centric experiences, I approach every project with enthusiasm and a dynamic mindset always wanting to learn more.",
-    about2: "If you're looking for a developer who brings a unique blend of creativity, technical expertise, and a global perspective to the table, then look no further! Whether you're a multinational corporation or a scrappy startup, I'm always ready to dive in and create something amazing. So let's connect, collaborate, and make some magic happen!"
+    about: "software developer with an adventurous spirit, I thrive on pushing the boundaries of the digital realm. My passion for creating custom websites and applications shines through in projects like JobGeek, where I focused on simplifying job searches, and the Healthcare Management System, which enhances operational efficiency in healthcare organizations. I immerse myself in innovative endeavors that blend creativity with technology, always striving to craft engaging, user-centric experiences. With a dynamic mindset and a commitment to continuous learning, I approach each project with enthusiasm, eager to explore new solutions and make a meaningful impact.",
+    about2: "If you're in search of a developer who combines creativity, technical expertise, and a global outlook, you've come to the right place! Whether you're a multinational corporation or an ambitious startup, I'm eager to dive in and build cool projects (legally) together. Let's connect, collaborate, and create something extraordinary!"
 }
 
 export const testimonialsLeft = [
@@ -99,18 +119,18 @@ export const testimonialsRight = [
 
 export const socialMedia = [
     {
-      id: 1,
-      img: "/git.svg",
-      link: "https://github.com/parthkumar-patel",
+        id: 1,
+        img: "/git.svg",
+        link: "https://github.com/loganihrishi",
     },
     {
-      id: 2,
-      img: "/link.svg",
-      link: "https://www.linkedin.com/in/parth-patel-433703266/",
+        id: 2,
+        img: "/link.svg",
+        link: "https://www.linkedin.com/in/loganihrishi/",
     },
     {
-      id: 3,
-      img: "/insta.svg",
-      link: "https://www.instagram.com/_parth_1921/",
+        id: 3,
+        img: "/insta.svg",
+        link: "https://www.instagram.com/logani.hrishi/",
     }
-  ];
+];

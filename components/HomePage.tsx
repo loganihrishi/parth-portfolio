@@ -116,7 +116,7 @@ const HomePage: React.FC = () => {
             <div className='basis-1/2 sm:basis-1/3 h-full'></div>
             <div className='absolute top-0 left-0 w-full h-full flex flex-row items-center justify-between p-4 text-[#81838D] dark:text-[#777B84] text-[10px] leading-[12px] font-jetbrains font-normal'>
               <p className='capitalize text-left z-[2]'>
-                GLOBAL CITIZEN
+              
               </p>
               <p className='capitalize text-right z-[2]'>
                 {time} GMT{gmtValue}
@@ -136,19 +136,34 @@ const HomePage: React.FC = () => {
           variants={containerVariants}
         >
           <div className='rounded-full border ring-[#E8E8EC]'>
-            <Image src={'/profile_dark.svg'} alt="" height={104} width={104} className='hidden dark:inline' />
-            <Image src={'/profile_light.svg'} alt="" height={104} width={104} className='inline dark:hidden' />
+          <Image 
+  src={'/profile_pic.png'} 
+  alt="" 
+  // className='inline dark:hidden' 
+  height={125} 
+  width={125} 
+  className='inline dark:hidden' 
+  style={{ 
+    borderRadius: '50%',  // Circular shape
+    border: '6px solid #000', // Border color and thickness
+    objectFit: 'cover',  // Ensures image covers the area
+    display: 'block', // Ensures block layout
+    maxWidth: '100%', // Prevents overflow
+    maxHeight: '100%', // Prevents overflow
+    height: '125px', // Ensures height
+    width: '125px' // Ensures width
+  }} 
+/>
+
           </div>
 
           <motion.div className='flex flex-col gap-4 sm:gap-[10px] items-center justify-center max-w-[860px] mt-7 sm:mt-9 text-center sm:p-0 p-4' variants={childVariants}>
-            <h1 className='font-bluu text-[44px] sm:text-[60px] lg:text-[89px] leading-[48px] sm:leading-none font-normal text-[#1C2024] dark:text-white'>
-              Hi, I&apos;m Parth.
+            <h1 className=' text-[44px] sm:text-[60px] lg:text-[89px] leading-[48px] sm:leading-none font-normal text-[#1C2024] dark:text-white'>
+              Hi, I&apos;m Hrishi
             </h1>
             <div className='font-libre max-w-[640px] text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
               <p>
-                A full stack developer focused on front-end development and design. Passionate about creating
-                visually appealing products and leveraging AI for innovative solutions, I continuously seek new skills
-                to enhance my work.
+              A Junior at UBC majoring in CS & Statistics. I'm passionate about learning and exploring new technologies through personal projects. Outside of coding, I stay active and healthy with regular workouts. Thanks for visiting my portfolio. Let's connect and collaborate on exciting projects!
               </p>
               <p>
                 Let&apos;s build something incredible together – and maybe even swap a few travel stories along the way!
