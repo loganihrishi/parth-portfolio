@@ -163,7 +163,7 @@ const HomePage: React.FC = () => {
             </h1>
             <div className='font-libre max-w-[640px] text-lg font-normal text-[#81838D] dark:text-[#777B84]'>
               <p>
-              A Junior at UBC majoring in CS & Statistics. I'm passionate about learning and exploring new technologies through personal projects. Outside of coding, I stay active and healthy with regular workouts. Thanks for visiting my portfolio. Let's connect and collaborate on exciting projects!
+              A Junior at UBC majoring in CS & Statistics. I&apos;m passionate about learning and exploring new technologies through personal projects. Outside of coding, I stay active and healthy with regular workouts. Thanks for visiting my portfolio. Let&apos;s connect and collaborate on exciting projects!
               </p>
               <p>
                 Let&apos;s build something incredible together – and maybe even swap a few travel stories along the way!
