@@ -30,7 +30,7 @@ const Footer = () => {
   // const router = useRouter();
   
   const handleDownload = () => {
-    const url = 'https://drive.google.com/uc?export=download&id=1bkKOoogZlGUoZONLM2Y27f50yklNxz7B';
+    const url = 'https://drive.google.com/uc?export=download&id=1de52aqLRAY14-zAoJ7NN5rk_aogXuKR7';
     const a = document.createElement('a');
     a.href = url;
     a.target = '_blank';
