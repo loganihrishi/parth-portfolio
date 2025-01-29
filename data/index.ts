@@ -9,15 +9,15 @@ export const navItems = [
 export const skillSets = [
     {
         type: "Languages",
-        skills: ["Java", "Python", "C++", "SQL", "R", "JavaScript", "TypeScript", "HTML/CSS"]
+        skills: ["Java", "Python", "C#", "C++", "Lua", "SQL", "R", "JavaScript", "TypeScript", "HTML/CSS"]
     },
     {
         type: "Frameworks",
-        skills: ["React", "NextJS", "ExpressJS", "NodeJS", "JUnit", "Tailwind", "RESTful API"]
+        skills: ["React", "NextJS", "ExpressJS", "NodeJS", , "LÖVE2D", "JUnit", "Tailwind", "Flask API"]
     },
     {
         type: "Developer Tools",
-        skills: ["Git", "Docker", "VS Code", "PyCharm", "IntelliJ", "MongoDB", "Firebase", "Figma"]
+        skills: ["Git", "Unity 3D", "VS Code", "PyCharm", "IntelliJ", "MongoDB", "Firebase", "Figma", "Google Cloud"]
     },
     {
         type: "Libraries",
@@ -28,26 +28,42 @@ export const skillSets = [
 export const workLists = [
     {
         logo: "/glasses.png",
+        img: "/maze_thumbnail.webp",
+        title: "Maze Game in Unity 3D 🫤",
+        description: "A 3D puzzle game where players navigate complex mazes, avoid traps, and solve challenges to reach the exit. ",
+        tags: ["Unity 3D", "C#", "GAME DEVELOPMENT"],
+        project_url: "https://github.com/loganihrishi/MazeGameUnity.git"
+    },
+    {
+        logo: "/glasses.png",
+        img: "/flappy_bird.jpg",
+        title: "Flappy Bird Clone 🐦",
+        description: "A nostalgic clone of the classic Flappy Bird recreated in Lua with LÖVE2D for endless fun and retro vibes. ",
+        tags: ["LUA", "LÖVE2D", "GAME DEVELOPMENT", "DEVELOPER"],
+        project_url: "https://github.com/loganihrishi/FlappyBird.git"
+    },
+    {
+        logo: "/glasses.png",
         img: "/jobgeek.png",
-        title: "JobGeek",
+        title: "JobGeek 👓",
         description: "Simplifying job searches and tracking for anyone who wnats to stay organized.",
-        tags: ["CO-FOUNDER", "DEVELOPER", "PRODUCT MANAGER", "USER-FRIENDLY", "SUPPORT"],
+        tags: ["REACT.JS", "EXPRESS.JS", "MONGODB", "FIREBASE", "GOOGLE CLOUD FUNCTIONS"],
         project_url: "https://jobgeek.vercel.app/"
     },
 
     {
         logo: "/glasses.png",
         img: "/healthcare_thumbnail.jpeg",
-        title: "Healthcare Management System",
+        title: "Healthcare Management System 📄",
         description: "Streamline healthcare operations with our Java-based Healthcare Management System. Enjoy reliable, tested performance, seamless JSON data management, and an intuitive Java Swing GUI for enhanced efficiency and data integrity.",
-        tags: ["HEALTHCARE", "JAVA", "OOP", "GUI", "JSON", "TESTING", "EFFICIENT"],
+        tags: ["HEALTHCARE", "JAVA", "OOP", "GUI", "JSON", "UNIT TESTING"],
         project_url: "https://github.com/loganihrishi/Healthcare-Management-System"
     },
 
     {
         logo: "/glasses.png",
         img: "/MazeEscaper.jpeg",
-        title: "MazeEscaper",
+        title: "MazeEscaper 🤔",
         description: "Dive into MazeEscaper, a Java maze escape game featuring randomly generated mazes for a unique challenge each time. Navigate using intuitive arrow keys in a user-friendly GUI, and easily save your progress to continue later. Can you find the exit?",
         tags: ["GAME DEVELOPER", "JAVA", "MAZE ESCAPE", "USER-FRIENDLY", "RANDOM MAZES", "SAVE FUNCTIONALITY"],
         project_url: "https://github.com/loganihrishi/MazeEscaper/"
@@ -56,7 +72,7 @@ export const workLists = [
     {
         logo: "/glasses.png",
         img: "/Infinite_Runner.jpeg",
-        title: "InfiniteRunner",
+        title: "InfiniteRunner 🏃🏼‍♀️",
         description: "Experience an engaging game crafted with **Python and Pygame**, featuring randomized obstacles for unique challenges. Enjoy seamless controls with an advanced gesture recognition system using **OpenCV**, processing inputs in under 100ms. Immerse yourself in captivating background music for a dynamic gaming experience.",
         tags: ["GAME DEVELOPMENT", "PYTHON", "PYGAME", "OPEN CV", "GESTURE RECOGNITION", "AUDIO PROCESSING"],
         project_url: "https://github.com/loganihrishi/MazeEscaper/"

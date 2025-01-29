@@ -14,7 +14,7 @@ const Resume = () => {
   }, []);
 
   const handleDownload = () => {
-    const url = 'https://docs.google.com/document/d/1z1FCToE24ocjeD984sE6zEvEhFdKjzS0jPnFZCXh-SU/edit?usp=sharing';
+    const url = 'https://docs.google.com/document/d/1iIvn9VnYdkh81ul4KkknhH1e22rK5PRdOf5bv3wT5eQ/edit?usp=sharing';
     const a = document.createElement('a');
     a.href = url;
     a.target = '_blank';
