@@ -84,7 +84,7 @@ const App: React.FC<AppProps> = ({ type }) => {
             setActive={setActive}
             rowIndex={Math.floor(index / 4)}
             colIndex={index % 4}
-            skill={skills[index]}
+            skill={skills[index] || ""}
             key={index}
           />
         ))}
